@@ -1,0 +1,139 @@
+
+\begin{table}[H]  
+\caption{``检查订单状况"加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   检查订单状况 \\
+        \hline
+        \quad 编号:  & 3.1.1 \\
+        \hline
+        \quad 简述:  & 检查用户购买商品的订单状况，是正常或是已取消 \\
+        \hline
+        \quad 输入:  & 订单信息、收银\\
+        \hline
+        \quad 输出:  & 退款、被取消订单 \\
+        \hline
+        \quad 逻辑:  & 根据订单信息，检查订单状况，若已取消则根据收银返回被取消订单并完成退款，正常则生成正常订单，并将收银放入资金管理账户。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“检查订单状况”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 订单信息} 
+        \STATE Generate 正常订单信息 Based on 订单信息
+        \STATE Put 收银 into 资金管理账户
+        \ELSE
+        \STATE Generate 正常订单信息 Based on 被取消订单信息
+        \STATE Do 退款 and Return 收银
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{``订单发货"加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   订单发货 \\
+        \hline
+        \quad 编号:  & 3.1.2 \\
+        \hline
+        \quad 简述:  & 将用户所下的正常订单进行发货 \\
+        \hline
+        \quad 输入:  & 正常订单 \\
+        \hline
+        \quad 输出:  & 快递单号、订单完成信息 \\
+        \hline
+        \quad 逻辑:  & 通过正常订单中填写的收件人、电话和配送地址等信息，会自动生成配送单，匹配快递公司并交由其进行处理，生成快递单号，安排出货和配送。同时，返回快递公司给出的快递单号，最后将发货完成的汇总到订单完成信息中。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“订单发货”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Get 收件人、电话和配送地址等信息 of 正常订单
+        \STATE Generate 配送单
+        \STATE Match 快递公司
+        \STATE Generate 快递单号 and Arrange 出货配送
+        \STATE Summarize 发货信息 to 订单完成信息 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{``货款发放"加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   货款发放 \\
+        \hline
+        \quad 编号:  & 3.1.3 \\
+        \hline
+        \quad 简述:  & 将用户购买商品的货款付给对应爱心商户 \\
+        \hline
+        \quad 输入:  & 订单完成信息 \\
+        \hline
+        \quad 输出:  & 货款、订单列表 \\
+        \hline
+        \quad 逻辑:  & 根据订单完成信息，系统将对应的款项和对应的商户进行匹配，将货款打入商户的账户，并生成完结订单列表。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“货款发放”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Get 款项和商户信息 of 订单完成信息
+        \STATE Match 对应商户ID
+        \STATE Add 货款 to 对应商户账户
+        \STATE Generate 完结订单列表
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{``留存买家信息"加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   留存买家信息 \\
+        \hline
+        \quad 编号:  & 3.1.4 \\
+        \hline
+        \quad 简述:  & 将用户所下的正常订单进行发货 \\
+        \hline
+        \quad 输入:  & 订单完成信息 \\
+        \hline
+        \quad 输出:  & 快递单号、订单完成信息 \\
+        \hline
+        \quad 逻辑:  & 订单完成后，留存订单完成信息中的付款金额和用户名，作为爱心人士信息，用作爱心反馈操作。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“留存买家信息”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Get 付款金额和用户名 of 订单完成信息
+        \STATE Save 付款金额和用户名 as 爱心人士信息
+    \end{algorithmic} 
+\end{algorithm}

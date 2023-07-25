@@ -1,0 +1,142 @@
+\begin{table}[H]  
+    \caption{``订单信息"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   订单信息 \\
+            \hline
+            \quad 简述:  & 用户购买商品，系统生成订单的信息 \\
+            \hline
+            \quad 来源:  & 源点``公益商户" \\
+            \hline
+            \quad 去向:  & 加工``检查订单状况" \\
+            \hline
+            \quad 组成:  & 订单ID+商品ID+公益商家ID+用户ID+用户名+收件人+联系方式+发货地址+下单时间 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    
+    \begin{table}[H]  
+    \caption{``收银"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   收银 \\
+            \hline
+            \quad 简述:  & 用户购买商品的付款 \\
+            \hline
+            \quad 来源:  & 源点``购物者" \\
+            \hline
+            \quad 去向:  & 加工``检查订单状况" \\
+            \hline
+            \quad 组成:  & 付款金额+支付方式  \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[H]  
+    \caption{``被取消订单"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   被取消订单 \\
+            \hline
+            \quad 简述:  & 检查订单状况后发现状态为已取消的订单 \\
+            \hline
+            \quad 来源:  & 加工``检查订单状况" \\
+            \hline
+            \quad 去向:  & 源点``公益商户" \\
+            \hline
+            \quad 组成:  & 订单信息  \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[H]  
+    \caption{``退款"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   退款 \\
+            \hline
+            \quad 简述:  & 订单取消后对用户付款的退还 \\
+            \hline
+            \quad 来源:  & 加工``检查订单状况" \\
+            \hline
+            \quad 去向:  & 源点``购物者" \\
+            \hline
+            \quad 组成:  & 收银  \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[H]  
+    \caption{``正常订单"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   正常订单 \\
+            \hline
+            \quad 简述:  & 检查订单状况后未被取消的订单 \\
+            \hline
+            \quad 来源:  & 加工``检查订单状况" \\
+            \hline
+            \quad 去向:  & 加工``订单发货" \\
+            \hline
+            \quad 组成:  & 订单信息  \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[H]  
+    \caption{``快递单号"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   快递单号 \\
+            \hline
+            \quad 简述:  & 正常订单完成发货后的物流单号 \\
+            \hline
+            \quad 来源:  & 加工``订单发货" \\
+            \hline
+            \quad 去向:  &  源点``购物者"\\
+            \hline
+            \quad 组成:  & 快递公司ID+物流单号  \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[H]  
+    \caption{``订单列表"数据流词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   订单列表 \\
+            \hline
+            \quad 简述:  & 货款发放后的完结的订单汇总 \\
+            \hline
+            \quad 来源:  & 文件``订单完成信息" \\
+            \hline
+            \quad 去向:  & 源点``爱心商户" \\
+            \hline
+            \quad 组成:  & 订单ID+商品ID+公益商家ID+用户ID+完结时间 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+    

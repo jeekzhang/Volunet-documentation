@@ -1,0 +1,137 @@
+\begin{table}[H]  
+\caption{“团队查询”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  团队查询 \\
+        \hline
+        \quad 编号:  & 1.5.1 \\
+        \hline
+        \quad 简述:  & 查询符合条件的团队的功能 \\
+        \hline
+        \quad 输入:  & 入队查询条件 \\
+        \hline
+        \quad 输出:  & 入队查询信息\\
+        \hline
+        \quad 逻辑:  & 根据查询条件生成完整的查询信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“团队查询”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 查询时间
+        \STATE Write 入队查询条件 + 查询时间 To 入队查询信息 
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“团队展示”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   团队展示 \\
+        \hline
+        \quad 编号:  & 1.5.2 \\
+        \hline
+        \quad 简述:  & 展示符合条件的团队的功能 \\
+        \hline
+        \quad 输入:  & 查询信息、团队信息 \\
+        \hline
+        \quad 输出:  & 团队展示信息\\
+        \hline
+        \quad 逻辑:  & 根据查询信息、团队信息生成复合条件的团队的团队展示信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“团队展示”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Select Items In 团队信息 Match 入队查询信息
+        \STATE Write Selected Items As 团队展示信息
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“加入团队”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   加入团队 \\
+        \hline
+        \quad 编号:  & 1.5.3 \\
+        \hline
+        \quad 简述:  & 用户加入团队的功能 \\
+        \hline
+        \quad 输入:  & 入队申请词条 \\
+        \hline
+        \quad 输出:  & 入队申请信息 \\
+        \hline
+        \quad 逻辑:  & 根据查询到的团队信息填写生产入队申请。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“加入团队”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 申请时间
+        \STATE Select Items In 用户信息 Match 用户ID
+        \STATE Get 用户ID + 用户名 + 申请时间 From Selected Items
+        \STATE Write 入队申请词条 +用户ID +用户名 + 所属团队 + 申请时间 To 入队申请信息
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“入队审核”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   入驻审核 \\
+        \hline
+        \quad 编号:  & 1.5.4 \\
+        \hline
+        \quad 简述:  & 志愿团队审核用户入队的功能 \\
+        \hline
+        \quad 输入:  & 入队申请信息、入队审核信息 \\
+        \hline
+        \quad 输出:  & 入队审核反馈、团队信息、用户信息 \\
+        \hline
+        \quad 逻辑:  & 志愿团队审核入队用户信息，作出决定后更新团队信息和用户信息，并给出审核反馈。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“入队审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 入队申请信息} 
+        \STATE Update Item.所属团队 In 用户信息 Match 用户ID From 入队申请信息
+        \STATE Update Item In 团队信息 Match 团队ID From 入队申请信息
+        \STATE Write 入队审核意见  To 入队审核反馈
+        \ELSE
+        \STATE Write 入队审核意见  To 入队审核反馈 
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}

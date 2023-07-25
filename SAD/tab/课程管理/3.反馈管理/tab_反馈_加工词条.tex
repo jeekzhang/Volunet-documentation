@@ -1,0 +1,99 @@
+\begin{table}[H]  
+\caption{“反馈生成”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈生成 \\
+        \hline
+        \quad 编号: & 4.3.1 \\
+        \hline
+        \quad 简述: & 生成反馈信息的功能 \\
+        \hline
+        \quad 输入: & 反馈表 \\
+        \hline
+        \quad 输出: & 课程反馈 \\
+        \hline
+        \quad 逻辑: & 将生成的反馈描述整理成一个文档或报告，以便课程组织者和授课人参考。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“反馈生成”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 发送时间
+        \STATE Generate 反馈ID 
+        \STATE Write 反馈发送记录 + 反馈ID + 发送时间 To 课程反馈
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“反馈查询”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈查询 \\
+        \hline
+        \quad 编号: & 4.3.2 \\
+        \hline
+        \quad 简述: & 授课人进行反馈查询的功能 \\
+        \hline
+        \quad 输入: & 查询条件、课程反馈 \\
+        \hline
+        \quad 输出: & 查询结果 \\
+        \hline
+        \quad 逻辑: & 授课人选择条件查询自己教授课程，得到回应或解决方案。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“反馈查询”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 查询时间
+        \STATE Write 查询条件 + 课程反馈 To 查询结果 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“反馈审核删除”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈审核删除 \\
+        \hline
+        \quad 编号: & 4.3.3 \\
+        \hline
+        \quad 简述: & 系统管理员进行反馈审核删除的功能 \\
+        \hline
+        \quad 输入: & 被删除反馈信息 \\
+        \hline
+        \quad 输出: & 课程反馈、反馈删除通知 \\
+        \hline
+        \quad 逻辑: & 管理员对已经发布的反馈信息进行审核，判断其是否违反了相关规定或政策，并在必要时将其删除。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“反馈审核删除”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Select Items In 反馈 Match 反馈审核
+        \STATE Delete 用户ID, 反馈内容 To 课程反馈
+    \end{algorithmic} 
+\end{algorithm}

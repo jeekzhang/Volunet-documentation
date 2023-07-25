@@ -1,0 +1,150 @@
+\begin{table}[H]  
+\caption{``签到”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 签到\\
+        \hline
+        \quad 编号: & 2.3.1 \\
+        \hline
+        \quad 简述: & 志愿者进行签到 \\
+        \hline
+        \quad 输入:& 参与人员名单、签到信息 \\
+        \hline
+        \quad 输出:& 签到人员名单、签到失败提醒\\
+        \hline
+        \quad 逻辑:& 根据参与人员名单，校验用户签到信息是否正确，如错误输出签到失败信息，如正确则记录在签到人员名单。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``签到”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 参与人员名单 then}
+        \IF{Pass Check 签到信息 then}
+        \STATE Generate 签到时间+签到地点 Based on 签到信息
+        \STATE Write 志愿者ID+志愿项目ID+签到时间+签到地点 to 签到人员名单
+        
+        \ELSE return 签到失败信息
+        \ENDIF
+        \ELSE return 签到失败信息
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{``签退”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 签退\\
+        \hline
+        \quad 编号: & 2.3.2 \\
+        \hline
+        \quad 简述: & 志愿者进行签退 \\
+        \hline
+        \quad 输入:& 签到人员名单、签退信息 \\
+        \hline
+        \quad 输出:& 签退人员名单、签退失败提醒\\
+        \hline
+        \quad 逻辑:& 校验用户是否在签退人员名单中，同时校验用户签退信息是否正确，如错误输出签退失败信息，如正确则记录在签退人员名单。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``签退”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 签退人员名单 then}
+        \IF{Pass Check 签退信息 then}
+        \STATE Generate 签退时间+签退地点 Based on 签退信息
+        \STATE Write 志愿者ID+志愿项目ID+签退时间+签退地点 to 签退人员名单
+        
+        \ELSE return 签退失败信息
+        \ENDIF
+        \ELSE return 签退失败信息
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{``活动评价”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 活动评价\\
+        \hline
+        \quad 编号: & 2.3.3 \\
+        \hline
+        \quad 简述: & 完成签到签退的志愿者对活动进行评价 \\
+        \hline
+        \quad 输入:& 志愿者活动参与评价感想、签退人员名单 \\
+        \hline
+        \quad 输出:& 志愿者反馈信息、论坛发布\\
+        \hline
+        \quad 逻辑:& 校验志愿者是否完成签退，完成签退的志愿者可以提交对该志愿项目的反馈，反馈一方面会形成志愿者反馈信息，另一方面会处理后发布到论坛 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``活动评价”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 签退人员名单 then}
+        \IF{Pass Check 志愿者活动参与评价感想 then}
+        \STATE Generate 签退时间+签退地点 Based on 签退信息
+        \STATE Write 志愿者ID+志愿项目ID+志愿者姓名+评分+文字反馈 to 志愿者反馈信息
+        \ELSE return 反馈失败信息
+        \ENDIF
+        \ELSE return 反馈失败信息
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{``反馈志愿团队”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈志愿团队\\
+        \hline
+        \quad 编号: & 2.3.4 \\
+        \hline
+        \quad 简述: & 将参与志愿者的签到、签退、活动反馈信息提供给志愿团队 \\
+        \hline
+        \quad 输入:& 参与人员名单、签到人员名单、签退人员名单、志愿者反馈信息 \\
+        \hline
+        \quad 输出:& 活动参与情况反馈\\
+        \hline
+        \quad 逻辑:& 统计签到率、签退率、并将用户评分以及文字反馈以匿名形式交给志愿团队 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``反馈志愿团队”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Generate 签到率、签退率 Based on 参与人员名单、签到人员名单、签退人员名单
+        \STATE Generate 匿名评分+匿名文字反馈 Based on 志愿者反馈信息
+    \end{algorithmic} 
+\end{algorithm}

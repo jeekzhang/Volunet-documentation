@@ -1,0 +1,207 @@
+\begin{table}[H]  
+\caption{“登录权限查询”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 登录权限查询 \\
+        \hline
+        \quad 编号: & 4.1.1 \\
+        \hline
+        \quad 简述: & 查询用户登录权限的功能 \\
+        \hline
+        \quad 输入: & 授课申请书、已登录用户权限、用户ID \\
+        \hline
+        \quad 输出: & 登录状态、权限不足提示、用户名 \\
+        \hline
+        \quad 逻辑: & 查询对应用户ID的权限信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“登录权限查询”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 查询时间
+        \STATE Write 账号 + 密码 + 登录状态  To 登录权限查询信息 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“授课申请处理”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课申请处理 \\
+        \hline
+        \quad 编号: & 4.1.2 \\
+        \hline
+        \quad 简述: & 处理授课申请的功能 \\
+        \hline
+        \quad 输入: & 授课申请书、用户ID \\
+        \hline
+        \quad 输出: & 申请通过提示、申请处理时间、课程名、课程信息 \\
+        \hline
+        \quad 逻辑： & 通过对授课申请书处理申请、建立课程信息 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“授课申请处理”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{授课申请处理通过} 
+        \STATE Write 用户ID to 授课人信息 
+        \STATE Write {理由} + 反应时间  To 申请通过提示
+        \ELSE
+        \STATE Write {理由} + 反应时间  To 授课申请处理反馈
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“课程内容设置”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 课程内容设置 \\
+        \hline
+        \quad 编号: & 4.1.3 \\
+        \hline
+        \quad 简述: & 设置课程内容的功能 \\
+        \hline
+        \quad 输入: & 课程信息、用户ID、用户权限 \\
+        \hline 
+        \quad 输出: & 课程信息、课程资料 \\
+        \hline
+        \quad 逻辑: & 根据学科、用户需求等因素，确定课程的内容和教学目标，以及相应的评价方式。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“课程内容设置”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 课程名 + 课程类别 From 可选课程信息
+        \STATE Insert 课程测试 + 课程章节 Into 课程资料
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“课程内容修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 课程内容修改 \\
+        \hline
+        \quad 编号: & 4.1.4 \\
+        \hline
+        \quad 简述: & 授课人修改课程内容的功能 \\
+        \hline
+        \quad 输入: & 课程信息修改单+用户ID+用户权限 \\
+        \hline
+        \quad 输出: & 修改后的课程信息 \\
+        \hline
+        \quad 逻辑: & 授课人通过上传修改单现有课程内容进行更新、改进或调整。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“课程内容修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 课程名 From 课程信息修改单
+        \STATE Update Item In 课程内容 Match 课程名 With 课程内容修改信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“授课证书颁发”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课证书颁发 \\
+        \hline
+        \quad 编号: & 4.1.5 \\
+        \hline
+        \quad 简述: & 颁发授课人授课证书的功能 \\
+        \hline
+        \quad 输入: & 课程信息、用户名 \\
+        \hline
+        \quad 输出: & 授课证书 \\
+        \hline
+        \quad 逻辑: & 由相关机构颁发给授课人的证明授课能力和教学水平的证书。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“授课证书颁发”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 授课资质
+        \STATE Generate 授课人要求条件 Based On 授课人信息
+        \STATE Write 授课准许 To 授课证书
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“学生上课情况分析”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 学生上课情况分析 \\
+        \hline
+        \quad 编号: & 4.1.6 \\
+        \hline
+        \quad 简述: & 输出分析的学生上课情况的功能 \\
+        \hline
+        \quad 输入: & 学生修读情况、授课人名 \\
+        \hline
+        \quad 输出: & 修读情况分析、授课人名 \\
+        \hline
+        \quad 逻辑: & 对学生在上课过程中的表现和情况进行分析和评估，指导教学和促进学生学习。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“学生上课情况分析”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 学生修读情况
+        \FOR{ 用户ID + 课程进度 in 学生上课情况}
+        \STATE Select 对应课程内容 From 课程信息 Match 用户ID
+        \STATE Add 对应测试成绩+用户ID To 修读情况分析
+        \ENDFOR
+    \end{algorithmic} 
+\end{algorithm}

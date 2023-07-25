@@ -1,0 +1,102 @@
+\begin{table}[H]  
+\caption{“志愿者注册”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   注册填写 \\
+        \hline
+        \quad 编号:  & 1.1.1 \\
+        \hline
+        \quad 简述:  & 生成供审核的用户初始信息 \\
+        \hline
+        \quad 输入:  & 志愿者注册信息 \\
+        \hline
+        \quad 输出:  & 用户初始信息、志愿者注册反馈\\
+        \hline
+        \quad 逻辑:  & 根据志愿者注册信息生成用户初始信息，志愿者注册反馈。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“志愿者注册”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 志愿者注册信息} 
+        \STATE Create 用户ID
+        \STATE Get 系统时间 As 注册时间
+        \STATE Generate 注册反馈信息字段 Based On 志愿者注册信息
+        \STATE Write 志愿者注册信息 + 用户ID + 注册时间 To 用户初始信息
+        \STATE Write 注册反馈信息字段  To 志愿者注册反馈 
+        \ELSE
+        \STATE Generate 注册反馈信息字段 Based on 志愿者注册信息
+        \STATE Write 注册反馈信息字段 To 志愿者注册反馈 
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“初始限权”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   初始限权 \\
+        \hline
+        \quad 编号:  & 1.1.2 \\
+        \hline
+        \quad 简述:  & 为用户出示化权限的功能 \\
+        \hline
+        \quad 输入:  & 用户初始信息 \\
+        \hline
+        \quad 输出:  & 用户信息 \\
+        \hline
+        \quad 逻辑:  & 根据用户初始信息赋予权限生成完整的用户信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“初始限权”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Generate 用户权限 Based On 用户初始信息
+        \STATE Write 用户初始信息 + 用户权限 To 用户信息 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“信息修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   信息修改 \\
+        \hline
+        \quad 编号:  & 1.1.3 \\
+        \hline
+        \quad 简述:  & 对用户信息进行修改的功能 \\
+        \hline
+        \quad 输入:  & 用户修改信息 \\
+        \hline
+        \quad 输出:  & 用户信息 \\
+        \hline
+        \quad 逻辑:  & 完成用户修改信息的处理。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“信息修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Update 用户修改信息 In 用户信息 Match 用户ID
+    \end{algorithmic} 
+\end{algorithm}

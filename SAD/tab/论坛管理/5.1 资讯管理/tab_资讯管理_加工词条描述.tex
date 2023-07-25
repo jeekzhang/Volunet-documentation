@@ -1,0 +1,297 @@
+\begin{table}[H]  
+\caption{“资讯编写”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯编写 \\
+        \hline
+        \quad 编号:  & 5.1.1 \\
+        \hline
+        \quad 简述:  & 资讯编写的功能 \\
+        \hline
+        \quad 输入:  & 活动反馈信息、政府资讯、活动推送信息 \\
+        \hline
+        \quad 输出:  & 资讯信息 \\
+        \hline
+        \quad 逻辑:  & 保存用户资讯的内容信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯编写”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 资讯ID
+        \STATE Get 系统时间 As 发布时间
+        \STATE Set 最后编辑时间 As 发布时间
+        \STATE Write [活动反馈信息|活动推动信息|官方资讯信息] + 资讯ID + 发布时间 +最后编辑时间 To 初始资讯信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯限权”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  资讯限权 \\
+        \hline
+        \quad 编号:  & 5.1.2 \\
+        \hline
+        \quad 简述:  & 用户设置资讯阅读权限的功能 \\
+        \hline
+        \quad 输入:  & 资讯密码 \\
+        \hline
+        \quad 输出:  & 限权资讯信息 \\
+        \hline
+        \quad 逻辑:  & 用户如需给资讯设置密码，可以给出资讯密码信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯限权”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{ Get 资讯密码}
+        \STATE Write 初始资讯信息 + 资讯密码 To 限权资讯信息
+        \ELSE
+        \STATE Write 初始资讯信息 To 限权资讯信息
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“资讯分类”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  资讯分类 \\
+        \hline
+        \quad 编号:  & 5.1.3 \\
+        \hline
+        \quad 简述:  & 用户选择资讯分类的功能 \\
+        \hline
+        \quad 输入:  & 限权资讯信息、资讯分类信息 \\
+        \hline
+        \quad 输出:  & 资讯信息 \\
+        \hline
+        \quad 逻辑:  & 根据资讯分类、限权资讯信息生成资讯信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯分类”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Generate 类别ID + 资讯类别 Based On 限权资讯信息
+        \STATE Write 限权资讯信息 + 类别ID + 资讯类别 To 资讯信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“分类设置”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯设置 \\
+        \hline
+        \quad 编号:  & 5.1.4\\
+        \hline
+        \quad 简述:  & 系统管理员设置好资讯分类的功能 \\
+        \hline
+        \quad 输入:  & 可选分类信息 \\
+        \hline
+        \quad 输出:  & 资讯分类 \\
+        \hline
+        \quad 逻辑:  & 根据可选分类信息生成资讯分类。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“分类设置”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 类别ID + 资讯类别 From 可选分类信息
+        \STATE Insert 类别ID + 资讯类别 Into 资讯分类
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯修改 \\
+        \hline
+        \quad 编号:  & 5.1.5 \\
+        \hline
+        \quad 简述:  & 对资讯进行修改的功能 \\
+        \hline
+        \quad 输入:  & 资讯修改信息、资讯审核意见 \\
+        \hline
+        \quad 输出:  & 资讯信息 \\
+        \hline
+        \quad 逻辑:  & 完成用户修改资讯的处理。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 资讯ID From 资讯修改信息
+        \STATE Update Item In 资讯信息 Match 资讯ID With 资讯修改信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯审核”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  资讯审核 \\
+        \hline
+        \quad 编号:  & 5.1.6 \\
+        \hline
+        \quad 简述:  & 系统管理员审核资讯的功能 \\
+        \hline
+        \quad 输入:  & 资讯审核意见 \\
+        \hline
+        \quad 输出:  & 资讯审核信息 \\
+        \hline
+        \quad 逻辑:  & 系统管理员审核资讯信息，并给出资讯的修改要求。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 审核时间
+        \STATE Write 资讯审核意见 + 审核时间 To 资讯审核信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯评论”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  资讯评论 \\
+        \hline
+        \quad 编号:  & 5.1.7 \\
+        \hline
+        \quad 简述:  & 对资讯进行评论的功能 \\
+        \hline
+        \quad 输入:  & 资讯评论记录 \\
+        \hline
+        \quad 输出:  & 资讯评论信息 \\
+        \hline
+        \quad 逻辑:  & 用户给出对资讯的评论。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯评论”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 评论ID
+        \STATE Get 系统时间 As 提交时间
+        \STATE Write 资讯评论记录+评论ID+提交时间+资讯评论信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯推送”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯推送 \\
+        \hline
+        \quad 编号:  & 5.1.8 \\
+        \hline
+        \quad 简述:  & 资讯推送的功能 \\
+        \hline
+        \quad 输入:  & 资讯信息 \\
+        \hline
+        \quad 输出:  & 推送信息 \\
+        \hline
+        \quad 逻辑:  & 根据资讯信息筛选出热度较高的手记推送信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯推送”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze In 资讯信息
+        \STATE Get 资讯ID From 资讯信息
+        \STATE Select 对应资讯评论 From 资讯评论信息 Match 资讯ID
+        \STATE Write 资讯信息 + 对应资讯评论 To 资讯推送信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“资讯审计”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯审计 \\
+        \hline
+        \quad 编号:  & 5.1.9 \\
+        \hline
+        \quad 简述:  & 审计资讯的功能 \\
+        \hline
+        \quad 输入:  & 资讯审核信息 \\
+        \hline
+        \quad 输出:  & 资讯管理审计报表 \\
+        \hline
+        \quad 逻辑:  & 根据资讯审核信息分析生成资讯管理审计报表。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“资讯审计”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 资讯审核信息
+        \STATE Generate 资讯审核信息统计分析报表字段 Based On 资讯审核信息
+        \STATE Write 资讯审核信息统计分析报表字段 To 资讯审计报表
+    \end{algorithmic} 
+\end{algorithm}

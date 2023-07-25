@@ -1,0 +1,229 @@
+\begin{table}[H]  
+\caption{“帖子编写”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  帖子编写 \\
+        \hline
+        \quad 编号:  & 5.3.1 \\
+        \hline
+        \quad 简述:  & 帖子编写的功能 \\
+        \hline
+        \quad 输入:  & 帖子编写信息 \\
+        \hline
+        \quad 输出:  & 帖子信息 \\
+        \hline
+        \quad 逻辑:  & 保存用户帖子的内容信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“帖子编写”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 帖子ID
+        \STATE Get 系统时间 As 发布时间
+        \STATE Set 最后编辑时间 As 发布时间
+        \STATE Write 用户帖子 + 帖子ID + 发布时间 +最后编辑时间 To 初始帖子信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“话题选定”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  话题选定 \\
+        \hline
+        \quad 编号:  & 5.3.2 \\
+        \hline
+        \quad 简述:  & 用户选择话题的功能 \\
+        \hline
+        \quad 输入:  & 可选话题信息、帖子话题选择信息 \\
+        \hline
+        \quad 输出:  & 话题选择信息 \\
+        \hline
+        \quad 逻辑:  & 帖子话题信息提供可选话题信息给用户，用户根据可选话题信息给出话题选择信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“话题选定”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Generate 话题ID + 话题名 Based On 初始帖子信息
+        \STATE Write 初始话题信息 + 话题ID + 话题名 To 帖子信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“话题订阅”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  话题订阅 \\
+        \hline
+        \quad 编号:  & 5.3.3 \\
+        \hline
+        \quad 简述:  & 对话题进行订阅的功能 \\
+        \hline
+        \quad 输入:  & 话题订阅记录 \\
+        \hline
+        \quad 输出:  & 话题订阅信息 \\
+        \hline
+        \quad 逻辑:  & 用户对话题进行订阅。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“话题订阅”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Insert 用户ID + 话题ID Into 订阅信息
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{“帖子修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  帖子修改 \\
+        \hline
+        \quad 编号:  & 5.3.4 \\
+        \hline
+        \quad 简述:  & 对帖子进行修改的功能 \\
+        \hline
+        \quad 输入:  & 帖子修改信息 \\
+        \hline
+        \quad 输出:  & 修改的帖子信息 \\
+        \hline
+        \quad 逻辑:  & 完成用户修改帖子的处理。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“帖子修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 帖子ID From 帖子修改信息
+        \STATE Update Item In 帖子信息 Match 帖子ID With 帖子修改信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“帖子审核”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  帖子审核 \\
+        \hline
+        \quad 编号:  & 5.3.5 \\
+        \hline
+        \quad 简述:  & 系统管理员审核帖子的功能 \\
+        \hline
+        \quad 输入:  & 帖子审核意见 \\
+        \hline
+        \quad 输出:  & 帖子审核信息 \\
+        \hline
+        \quad 逻辑:  & 系统管理员审核帖子信息，并给出帖子的修改要求。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“帖子审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 审核时间
+        \STATE Write 帖子审核意见 + 审核时间 To 帖子审核信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“推送帖子”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  帖子审核 \\
+        \hline
+        \quad 编号:  & 5.3.6 \\
+        \hline
+        \quad 简述:  & 推送帖子的功能 \\
+        \hline
+        \quad 输入:  & 帖子信息 \\
+        \hline
+        \quad 输出:  & 帖子推送 \\
+        \hline
+        \quad 逻辑:  & 根据帖子信息筛选出热度较高的手记推送信息\\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“帖子推送”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 帖子信息
+        \FOR{ 用户ID + 话题ID in 订阅信息}
+        \STATE Select 对应帖子信息 From 帖子信息 Match 话题ID
+        \STATE Add 对应手记评论+用户ID To 帖子推送信息
+        \ENDFOR
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“帖子审计”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 帖子审计 \\
+        \hline
+        \quad 编号:  & 5.3.7 \\
+        \hline
+        \quad 简述:  & 审计帖子的功能 \\
+        \hline
+        \quad 输入:  & 帖子审核信息 \\
+        \hline
+        \quad 输出:  & 交流管理审计报表 \\
+        \hline
+        \quad 逻辑:  & 根据帖子审核信息分析生成交流管理审计报表。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“帖子审计”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 帖子审核信息
+        \STATE Generate 帖子审核信息统计分析报表字段 Based On 帖子审核信息
+        \STATE Write 帖子审核信息统计分析报表字段 To 帖子审计报表
+    \end{algorithmic} 
+\end{algorithm}

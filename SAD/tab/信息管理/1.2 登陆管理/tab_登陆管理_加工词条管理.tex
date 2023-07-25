@@ -1,0 +1,105 @@
+\begin{table}[H]  
+\caption{“登陆检查”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   登陆检查 \\
+        \hline
+        \quad 编号:  & 1.2.1 \\
+        \hline
+        \quad 简述:  & 检查用户登陆词条是够正确的功能 \\
+        \hline
+        \quad 输入:  & 登陆词条\\
+        \hline
+        \quad 输出:  & 登陆信息\\
+        \hline
+        \quad 逻辑:  & 检查用户登陆词条是够正确，并根据用户填写的登陆词条生成登陆信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“登陆检查”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 登陆词条} 
+        \STATE Get 系统时间 As 登陆时间
+        \STATE Write 登陆词条 + 登陆时间 To 登陆信息
+        \ELSE
+        \STATE Generate 检查错误信息字段 Based on 登陆词条
+        \STATE Write 检查错误信息字段 To 错误检查信息 
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“登陆验证”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   登陆验证 \\
+        \hline
+        \quad 编号:  & 1.2.2 \\
+        \hline
+        \quad 简述:  & 验证用户登陆信息的功能 \\
+        \hline
+        \quad 输入:  & 登陆信息、用户信息\\
+        \hline
+        \quad 输出:  & 登陆反馈\\
+        \hline
+        \quad 逻辑:  & 根据用户填写的登陆信息验证登录，并生成登陆反馈。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“登陆验证”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Select Item In 用户信息 Match 账号, 密码}
+        \STATE Continue
+        \ELSE
+        \STATE Generate 登陆失败信息字段 Based on 登陆信息
+        \STATE Write 登陆失败信息字段 To 登陆失败信息 
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“错误反馈”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   错误反馈 \\
+        \hline
+        \quad 编号:  & 1.2.3 \\
+        \hline
+        \quad 简述:  & 对登陆中出现的错误进行反馈的功能 \\
+        \hline
+        \quad 输入:  & 检查错误信息、登陆失败信息\\
+        \hline
+        \quad 输出:  & 登陆反馈\\
+        \hline
+        \quad 逻辑:  & 根据检查错误信息，登陆失败信息生成登陆反馈。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“错误反馈”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF {Once Receive [检查错误信息|登陆失败信息]}
+        \STATE Write [检查错误信息|登陆失败信息] To 登陆反馈
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}

@@ -1,0 +1,95 @@
+\begin{table}[H]  
+    \caption{``爱心人士登记"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   爱心人士登记 \\
+            \hline
+            \quad 编号:  & 3.3.1 \\
+            \hline
+            \quad 简述:  & 登记爱心人士，以便爱心反馈 \\
+            \hline
+            \quad 输入:  & 爱心人士信息\\
+            \hline
+            \quad 输出:  & 爱心买家名单 \\
+            \hline
+            \quad 逻辑:  & 根据爱心人士信息，录入爱心买家并生成名单。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“爱心人士登记”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Generate 爱心买家名单 Base on 爱心人士信息
+    \end{algorithmic} 
+\end{algorithm}
+    
+    \begin{table}[H]  
+    \caption{``生成鸣谢名单"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   生成鸣谢名单 \\
+            \hline
+            \quad 编号:  & 3.3.2 \\
+            \hline
+            \quad 简述:  & 生成购买爱心商品和项目捐款的爱心人士名单，加以鸣谢 \\
+            \hline
+            \quad 输入:  & 爱心买家名单 \\
+            \hline
+            \quad 输出:  & 鸣谢名单 \\
+            \hline
+            \quad 逻辑:  & 为名单中所有用户名匹配一句特有的感谢语，生成鸣谢名单。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“生成鸣谢名单”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Get 用户名 of 爱心买家名单
+        \STATE Generate 感谢语
+        \STATE Save 用户名和感谢语 as 鸣谢名单
+    \end{algorithmic} 
+\end{algorithm}
+    
+    \begin{table}[H]  
+    \caption{``制作爱心证书"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   制作爱心证书 \\
+            \hline
+            \quad 编号:  & 3.3.3 \\
+            \hline
+            \quad 简述:  & 制作感谢爱心人士的爱心证书 \\
+            \hline
+            \quad 输入:  & 爱心买家名单 \\
+            \hline
+            \quad 输出:  & 爱心证书 \\
+            \hline
+            \quad 逻辑:  & 将用户名和感谢语输入定制的证书模板中，形成爱心证书。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“制作爱心证书”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Select 证书模板
+        \STATE Generate 爱心证书 from 用户名、感谢语和证书模板
+    \end{algorithmic} 
+\end{algorithm}

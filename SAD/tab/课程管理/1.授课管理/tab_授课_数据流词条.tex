@@ -1,0 +1,146 @@
+\begin{table}[H]  
+\caption{``授课申请书"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课申请书 \\
+        \hline
+        \quad 简述: & 授课人对授课的申请 \\
+        \hline
+        \quad 来源: & 源点``授课人" \\
+        \hline
+        \quad 去向: & 加工``登录状态查询" \\
+        \hline
+        \quad 组成： & 授课申请书+用户ID+用户密码 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``权限不足提示"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 权限不足提示 \\
+        \hline
+        \quad 简述: & 查询登录状态的结果 \\
+        \hline
+        \quad 来源: & 加工``登录状态查询" \\
+        \hline
+        \quad 去向: & 源点``授课人" \\
+        \hline
+        \quad 组成： & 登录状态+用户ID+用户名+权限信息 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{``申请通过提示"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 申请通过提示 \\
+        \hline
+        \quad 简述: & 授课申请处理的结果 \\
+        \hline
+        \quad 来源: & 加工``授课申请处理" \\
+        \hline
+        \quad 去向: & 源点``授课人" \\
+        \hline
+        \quad 组成: & 用户名+用户ID+用户权限+授课申请书编号+申请处理信息+申请处理时间 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{``课程信息"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 课程信息 \\
+        \hline
+        \quad 简述: & 申请通过的课程的信息 \\
+        \hline
+        \quad 来源: & 加工``授课申请处理" \\
+        \hline
+        \quad 去向: & 加工``课程内容设置" \\
+        \hline
+        \quad 组成: & 课程ID+课程名+用户ID+用户权限+课程内容+课程资料+课程收费 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[H]  
+\caption{``课程信息修改单"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 课程信息修改单 \\
+        \hline
+        \quad 简述： & 授课人对课程修改的信息 \\
+        \hline
+        \quad 来源: & 源点``授课人" \\
+        \hline
+        \quad 去向: & 加工``课程内容修改" \\
+        \hline
+        \quad 组成: & 课程ID+课程名+用户ID+用户权限+用户密码+课程内容+课程资料+课程收费 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``授课证书"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课证书 \\
+        \hline
+        \quad 简述: & 颁发的授课证书信息 \\
+        \hline
+        \quad 来源: & 加工``授课证书颁发" \\
+        \hline
+        \quad 去向: & 源点``授课人" \\
+        \hline
+        \quad 组成: & 课程ID+课程名+用户ID+用户名+课程内容+课程证书 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[H]  
+\caption{``修读情况分析"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 修读情况分析 \\
+        \hline
+        \quad 简述: & 学生的修读情况分析 \\
+        \hline
+        \quad 来源: & 加工``学生上课情况分析" \\
+        \hline
+        \quad 去向： & 源点``志愿者" \\
+        \hline
+        \quad 组成: & 用户ID+用户权限+用户名+学习课程+授课人名+考核情况+课程进度+学习课程反馈+学习课程数量 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+

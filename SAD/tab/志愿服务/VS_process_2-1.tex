@@ -1,0 +1,72 @@
+\begin{table}[H]  
+\caption{“检查申请单”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 检查申请单\\
+        \hline
+        \quad 编号: & 2.1.1 \\
+        \hline
+        \quad 简述: & 检查志愿团队所提交志愿项目申请单是否合格 \\
+        \hline
+        \quad 输入:& 项目申请单 \\
+        \hline
+        \quad 输出:& 通过审核项目单、不合格项目申请单\\
+        \hline
+        \quad 逻辑:& 根据志愿团队提交的项目申请单进行审核，审核不通过返回不合格信息提示，审核通过进入下一级加工。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“检查申请单”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 项目申请单 then}
+        \STATE Generate 项目审核通过字段 Based on 项目申请单
+        \ELSE
+        \STATE Generate 不合格原因+{不合格条目+修改建议} Based on 项目申请单
+        \STATE Write 不合格原因+{不合格条目+修改建议} to 不合格项目申请单
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+
+
+\begin{table}[H]  
+\caption{“项目登记管理”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 项目登记管理\\
+        \hline
+        \quad 编号: & 2.1.2 \\
+        \hline
+        \quad 简述: & 将审核通过的项目单进行编号登记，并发布到项目中心 \\
+        \hline
+        \quad 输入:& 通过审核项目单 \\
+        \hline
+        \quad 输出:& 项目信息表\\
+        \hline
+        \quad 逻辑:& 根据志愿团队ID和项目申请时间编订该志愿项目的ID编号，并将项目信息存储在项目信息表中。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“项目登记管理”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{项目审核通过字段 is True then}
+        \STATE Get 志愿团队ID+当前时间戳 As 志愿项目ID
+        \STATE Write 志愿项目ID+志愿团队ID++志愿项目名称+志愿项目简介+开展起止时间+开展地点+\{志愿者种类+志愿者人数+志愿者工作内容\} to 项目信息表
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}

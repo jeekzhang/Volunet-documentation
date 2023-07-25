@@ -1,0 +1,108 @@
+\begin{table}[H]  
+\caption{``志愿者预报名”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 志愿者预报名\\
+        \hline
+        \quad 编号: & 2.2.1 \\
+        \hline
+        \quad 简述: & 志愿者根据兴趣提交报名单，加工检查报名单是否合格 \\
+        \hline
+        \quad 输入:& 志愿者报名单 \\
+        \hline
+        \quad 输出:& 合格报名单、不合格报名单\\
+        \hline
+        \quad 逻辑:& 根据志愿者提交的报名单进行审核，审核不通过返回不合格信息提示，审核通过进入下一级加工。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``志愿者预报名”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 志愿者报名单 then}
+        \STATE Generate 合格字段 Based on 志愿者报名单
+        \ELSE
+        \STATE Generate 不合格原因+修改建议 Based on 志愿者报名单
+        \STATE Write 志愿者ID+志愿项目ID+{不合格原因+修改建议} to 不合格报名单
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{``志愿团队筛选”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 志愿团队筛选\\
+        \hline
+        \quad 编号: & 2.2.2 \\
+        \hline
+        \quad 简述: & 志愿团队根据志愿者合格报名单筛选合适志愿者 \\
+        \hline
+        \quad 输入:& 合格报名单 \\
+        \hline
+        \quad 输出:& 入选志愿者信息、参与人员名单\\
+        \hline
+        \quad 逻辑:& 志愿团队根据志愿者提交并审核通过的合格报名单选择合适志愿者，并生成参与人员名单。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``志愿团队筛选”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 合格报名单 then}
+        \STATE Write 志愿者ID+志愿项目ID+志愿者姓名+联系方式+志愿者种类 to 参与人员名单
+        \ENDIF
+    \end{algorithmic} 
+\end{algorithm}
+
+
+\begin{table}[H]  
+\caption{``报名信息通知”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 报名信息通知\\
+        \hline
+        \quad 编号: & 2.2.3 \\
+        \hline
+        \quad 简述: & 根据志愿团队筛选后的参与人员名单，向志愿者通知报名情况 \\
+        \hline
+        \quad 输入:& 参与人员名单 \\
+        \hline
+        \quad 输出:& 报名失败信息、报名成功信息\\
+        \hline
+        \quad 逻辑:& 对参与人员名单上的志愿者发送报名成功通知，对落选人员名单上的志愿者发送报名失败信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{``志愿团队筛选”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \FOR{志愿者信息 in 参与人员名单}
+        \STATE Send 报名成功信息
+        \ENDFOR
+        \FOR{志愿者信息 in 落选人员名单}
+        \STATE Send 报名失败信息
+        \ENDFOR
+    \end{algorithmic} 
+\end{algorithm}

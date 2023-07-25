@@ -1,0 +1,65 @@
+\begin{table}[H]  
+\caption{“授课证书颁发”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课证书颁发 \\
+        \hline
+        \quad 编号:  & 4.4.1 \\
+        \hline
+        \quad 简述:  & 颁发授课证书的功能 \\
+        \hline
+        \quad 输入:  & 课程信息 \\
+        \hline
+        \quad 输出:  & 授课证书 \\
+        \hline
+        \quad 逻辑:  & 由相关机构颁发给授课人的证明授课能力和教学水平的证书。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“授课证书颁发”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 授课资质
+        \STATE Generate 授课人要求条件 Based On 授课人信息
+        \STATE Write 授课准许 To 授课证书
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“结课证书颁发”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  结课证书颁发 \\
+        \hline
+        \quad 编号:  & 4.4.2 \\
+        \hline
+        \quad 简述:  & 给志愿者颁发结课证书的功能  \\
+        \hline
+        \quad 输入:  & 学生修读情况 \\
+        \hline
+        \quad 输出:  & 结课证书 \\
+        \hline
+        \quad 逻辑:  & 完成一定的课程学习后，由相关机构颁发证书，证明志愿者完成该课程学习。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“结课证书颁发”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 学生修读情况
+        \STATE Generate 课程测试成绩 Based On 课程信息
+        \STATE Write 结课认证 To 结课证书
+    \end{algorithmic} 
+\end{algorithm}

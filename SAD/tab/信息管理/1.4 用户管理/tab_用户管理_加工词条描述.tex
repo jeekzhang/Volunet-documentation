@@ -1,0 +1,85 @@
+\begin{table}[H]  
+\caption{“用户查询”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   用户查询 \\
+        \hline
+        \quad 编号:  & 1.4.1 \\
+        \hline
+        \quad 简述:  & 查询符合条件的用户 \\
+        \hline
+        \quad 输入:  & 查询条件 \\
+        \hline
+        \quad 输出:  & 查询信息\\
+        \hline
+        \quad 逻辑:  & 根据查询条件生成完整的查询信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“用户查询”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 查询时间
+        \STATE Write 用户查询条件 + 查询时间 To 用户查询信息 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“查询返回”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   查询返回 \\
+        \hline
+        \quad 编号:  & 1.4.2 \\
+        \hline
+        \quad 简述:  & 返回符合条件的用户信息 \\
+        \hline
+        \quad 输入:  & 查询信息、用户信息 \\
+        \hline
+        \quad 输出:  & 查询结果\\
+        \hline
+        \quad 逻辑:  & 返回符合查询条件的用户信息作为查询结果。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“查询返回”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Select Items In 用户信息 Match 用户查询信息
+        \STATE Write Selected Items As 用户查询结果
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“权限修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   权限修改 \\
+        \hline
+        \quad 编号:  & 1.4.3 \\
+        \hline
+        \quad 简述:  & 修改用户的权限 \\
+        \hline
+        \quad 输入:  & 权限修改请求 \\
+        \hline
+        \quad 输出:  & 用户信息 \\
+        \hline
+        \quad 逻辑:  & 系统管理员根据查询到的权限信息设置修改用户相应的权限信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}

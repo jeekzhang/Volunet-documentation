@@ -1,0 +1,460 @@
+\fancyhead[LH]{复旦大学软件工程}
+\fancyhead[RH]{第四章\quad 结构化分析}
+\section{结构化分析}
+
+\subsection{顶层数据流图}
+
+在需求分析的基础上，绘制Volunet志愿服务系统的顶层数据流图。
+从顶层数据流图\ref{top_data},Volunet志愿服务系统的参与者主要分为8类，包括志愿者、志愿团队、公益商户、购物者、捐款人、授课人、系统管理员、政府相关部门。
+
+\begin{figure}[H] 
+    \center{\includegraphics[width=0.95\textwidth]  {fig/top.pdf}} 
+    \bicaption{Volunet顶层数据流图}{Top-level Data Flow Diagram of Volunet}
+    \label{top_data}
+    \end{figure}
+
+\subsubsection{源点词条描述}
+
+图\ref{top_data}的顶层数据流图中对应的源点词条描述如表\ref{tab_volunteer}-\ref{tab_government}所示。
+
+\input{SAD/tab/4.1 top_data/top_data}
+
+\subsubsection{数据项描述}
+
+图\ref{top_data}的顶层数据流图中组成各数据流的数据项描述如表\ref{item_description}所示。
+
+\input{SAD/tab/item_description_draft}
+
+\subsection{0层数据流图} 
+进一步细化Volunt志愿服务系统的各个加工步骤说明，下面给出Volunt志愿服务系统的0层数据图（图\ref{0_level_data}),包括信息管理、志愿服务、爱心捐助、公益课程、交流论坛、志愿交友在内的6个更细的数据流加工。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth, height=0.95\textheight]{SAD/fig/0_level.pdf}
+  \bicaption{Volunet0层数据流图}{Data Flow Diagram for Level 0 of Volunet}
+  \label{0_level_data}
+\end{figure}
+  
+\subsubsection{数据加工词条描述说明}
+\input{SAD/tab/4.2 process}
+
+\subsection{1层数据流图}   
+在0层数据流图的基础上，本节将分析volunet志愿服务系统的1层数据流图，同样分为信息管理系统、志愿服务系统、爱心管理系统、公益课程系统、交流论坛系统、志愿交友系统六个部分进行介绍。
+
+\subsubsection{信息管理系统}
+以下是信息管理系统的1层数据流图、加工子图以及对应的数据字典和文件。信息管理系统分为个人管理、登陆管理、团队管理、用户管理和组队管理。
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_1.pdf}} 
+    \bicaption{信息管理系统1层数据流图}{Data Flow Diagram for Level 1 of Information Management System}
+    \end{figure}
+
+\paragraph{个人管理}~{}
+\\
+
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_2-1.pdf}} 
+    \bicaption{信息管理系统2层数据流图}{Data Flow Diagram for Level 2 of Information Management System}
+    \end{figure}
+
+（1）数据加工词条描述说明
+\input{SAD/tab/信息管理/1.1 个人管理/tab_个人管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/信息管理/1.1 个人管理/tab_个人管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/信息管理/1.1 个人管理/tab_个人管理_文件词条描述}
+
+\paragraph{登陆管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_2-2.pdf}} 
+    \bicaption{信息管理系统2层数据流图}{Data Flow Diagram for Level 2 of Information Management System}
+    \label{0level_data}
+    \end{figure}
+
+（1）数据加工词条描述说明
+\input{SAD/tab/信息管理/1.2 登陆管理/tab_登陆管理_加工词条管理}
+
+（2）数据流词条描述说明
+\input{SAD/tab/信息管理/1.2 登陆管理/tab_登陆管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/信息管理/1.2 登陆管理/tab_登陆管理_文件词条描述}
+
+\paragraph{团队管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_2-3.pdf}} 
+    \bicaption{信息管理系统2层数据流图}{Data Flow Diagram for Level 2 of Information Management System}
+    \label{0level_data}
+    \end{figure}
+
+（1）数据加工词条描述说明
+\input{SAD/tab/信息管理/1.3 团队管理/tab_团队管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/信息管理/1.3 团队管理/tab_团队管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/信息管理/1.3 团队管理/tab_团队管理_文件词条描述}
+
+
+\paragraph{用户管理}~{}
+\\
+
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_2-4.pdf}} 
+    \bicaption{信息管理系统2层数据流图}{Data Flow Diagram for Level 2 of Information Management System}
+    \label{0level_data}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/信息管理/1.4 用户管理/tab_用户管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/信息管理/1.4 用户管理/tab_用户管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/信息管理/1.4 用户管理/tab_用户管理_文件词条描述}
+
+
+\paragraph{组队管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/信息管理/I_2-5.pdf}} 
+    \bicaption{信息管理系统2层数据流图}{Data Flow Diagram for Level 2 of Information Management System}
+    \label{0level_data}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/信息管理/1.5 组队管理/tab_组队管理_加工词条管理}
+
+（2）数据流词条描述说明
+\input{SAD/tab/信息管理/1.5 组队管理/tab_组队管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/信息管理/1.5 组队管理/tab_组队管理_文件词条描述}
+
+\subsubsection{志愿服务系统}
+以下是志愿服务系统的1层数据流图、加工子图以及对应的数据字典和文件。志愿服务系统分为项目发布、项目报名的项目管理。
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/志愿服务/V_1.pdf}} 
+    \bicaption{志愿服务系统1层数据流图}{Data Flow Diagram for Level 1 of Volunteer Service System}
+    \end{figure}
+
+% （1）数据加工词条描述说明
+
+% \input{SAD/tab/志愿服务/4.1.2VS_process}
+
+
+% （2）数据流词条描述说明
+
+% \input{SAD/tab/志愿服务/4.1.2VS_flow}
+
+% （3）文件词条描述
+
+% \input{SAD/tab/志愿服务/4.1.2VS_data}
+
+\paragraph{项目发布}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/志愿服务/V_2-1.pdf}} 
+    \bicaption{志愿服务系统2层数据流图}{Data Flow Diagram for Level 2 of Volunteer Service System}
+    \end{figure}
+
+（1）数据加工词条描述说明
+
+\input{SAD/tab/志愿服务/VS_process_2-1}
+
+（2）数据流词条描述说明
+
+\input{SAD/tab/志愿服务/VS_flow_2-1}
+
+（3）文件词条描述
+
+\input{SAD/tab/志愿服务/VS_data_2-1}
+
+\paragraph{项目报名}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/志愿服务/V_2-2.2.pdf}} 
+    \bicaption{志愿服务系统2层数据流图}{Data Flow Diagram for Level 2 of Volunteer Service System}
+    \end{figure}
+
+（1）数据加工词条描述说明
+
+\input{SAD/tab/志愿服务/VS_process_2-2}
+
+（2）数据流词条描述说明
+
+\input{SAD/tab/志愿服务/VS_flow_2-2}
+
+（3）文件词条描述
+
+\input{SAD/tab/志愿服务/VS_data_2-2}
+
+
+\paragraph{项目管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/志愿服务/V_2-3.2.pdf}} 
+    \bicaption{志愿服务系统2层数据流图}{Data Flow Diagram for Level 2 of Volunteer Service System}
+    \end{figure}
+
+（1）数据加工词条描述说明
+
+\input{SAD/tab/志愿服务/VS_process_2-3}
+
+（2）数据流词条描述说明
+
+\input{SAD/tab/志愿服务/VS_flow_2-3}
+
+（3）文件词条描述
+
+\input{SAD/tab/志愿服务/VS_data_2-3}
+    
+\subsubsection{爱心捐助系统}~{}
+\\
+以下是爱心捐助系统的1层数据流图、加工子图以及对应的数据字典和文件。
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/爱心管理/L_1.pdf}} 
+    \bicaption{爱心捐助系统1层数据流图}{Data Flow Diagram for Level 1 of Love Donation System}
+    \end{figure}
+
+\paragraph{订单管理}~{}
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/爱心管理/L_2-1.pdf}} 
+    \bicaption{爱心捐助系统2层数据流图}{Data Flow Diagram for Level 2 of Love Donation System}
+    \end{figure}
+\\
+
+（1）数据加工词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_2_1}
+
+（2）数据流词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_2_2}
+
+（3）文件词条描述
+\input{SAD/tab/爱心管理/2层加工图/CM_data_2_3}
+
+\paragraph{捐款管理}~{}
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/爱心管理/L_2-2.pdf}} 
+    \bicaption{爱心捐助系统2层数据流图}{Data Flow Diagram for Level 2 of Love Donation System}
+    \end{figure}
+\\
+
+（1）数据加工词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_3_1}
+
+（2）数据流词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_3_2}
+
+（3）文件词条描述
+\input{SAD/tab/爱心管理/2层加工图/CM_data_3_3}
+
+\paragraph{爱心反馈管理}~{}
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/爱心管理/L_2-3.pdf}} 
+    \bicaption{爱心捐助系统2层数据流图}{Data Flow Diagram for Level 2 of Love Donation System}
+    \end{figure}
+\\
+
+（1）数据加工词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_4_1}
+
+（2）数据流词条描述说明
+\input{SAD/tab/爱心管理/2层加工图/CM_data_4_2}
+
+（3）文件词条描述
+\input{SAD/tab/爱心管理/2层加工图/CM_data_4_3}
+
+\subsubsection{公益课程系统}
+以下是公益课程系统的1层数据流图、加工子图以及对应的数据字典和文件。
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/课程管理/C_1.pdf}} 
+    \bicaption{公益课程系统1层数据流图}{Data Flow Diagram for Level 1 of Public Course System}
+    \end{figure}
+    
+\paragraph{授课管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/课程管理/C_2-1.pdf}} 
+    \bicaption{公益课程系统2层数据流图}{Data Flow Diagram for Level 2 of Public Course System}
+    \end{figure}
+
+（1）数据加工词条描述说明
+\input{SAD/tab/课程管理/1.授课管理/tab_授课_加工词条}
+
+（2）数据流词条描述说明
+\input{SAD/tab/课程管理/1.授课管理/tab_授课_数据流词条}
+
+（3）文件词条描述
+\input{SAD/tab/课程管理/1.授课管理/tab_授课_文件词条}
+
+
+\paragraph{修读管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/课程管理/C_2-2.pdf}} 
+    \bicaption{公益课程系统2层数据流图}{Data Flow Diagram for Level 2 of Public Course System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/课程管理/2.修读管理/tab_修读_加工词条}
+
+（2）数据流词条描述说明
+\input{SAD/tab/课程管理/1.授课管理/tab_授课_数据流词条}
+
+（3）文件词条描述
+\input{SAD/tab/课程管理/1.授课管理/tab_授课_文件词条}
+
+
+\paragraph{反馈管理}~{}
+\\
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/课程管理/C_2-3.pdf}} 
+    \bicaption{公益课程系统2层数据流图}{Data Flow Diagram for Level 2 of Public Course System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/课程管理/3.反馈管理/tab_反馈_加工词条}
+
+（2）数据流词条描述说明
+\input{SAD/tab/课程管理/3.反馈管理/tab_反馈_数据流词条}
+
+（3）文件词条描述
+\input{SAD/tab/课程管理/3.反馈管理/tab_反馈_文件词条}
+
+
+\paragraph{证书管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/课程管理/C_2-4.pdf}} 
+    \bicaption{公益课程系统2层数据流图}{Data Flow Diagram for Level 2 of Public Course System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/课程管理/4.证书管理/tab_证书_加工词条}
+
+（2）数据流词条描述说明
+\input{SAD/tab/课程管理/4.证书管理/tab_证书_数据流词条}
+
+（3）文件词条描述
+
+
+\subsubsection{交流论坛系统}
+以下是交流论坛系统的 1 层数据流图、加工子图以及对应的数据字典和文件。
+
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/论坛管理/F_1.pdf}} 
+    \bicaption{交流论坛系统1层数据流图}{Data Flow Diagram for Level 1 of Communication Forum System}
+    \end{figure}
+    
+\paragraph{资讯管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/论坛管理/F_2-1.pdf}} 
+    \bicaption{交流论坛系统2层数据流图}{Data Flow Diagram for Level 2 of Communication Forum System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/论坛管理/5.1 资讯管理/tab_资讯管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/论坛管理/5.1 资讯管理/tab_资讯管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/论坛管理/5.1 资讯管理/tab_资讯管理_文件词条描述}
+
+
+\paragraph{手记管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/论坛管理/F_2-2.pdf}} 
+    \bicaption{交流论坛系统2层数据流图}{Data Flow Diagram for Level 2 of Communication Forum System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/论坛管理/5.2 手记管理/tab_手记管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/论坛管理/5.2 手记管理/tab_手记管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/论坛管理/5.2 手记管理/tab_手记管理_文件词条描述}
+
+
+\paragraph{交流管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/论坛管理/F_2-3.pdf}} 
+    \bicaption{交流论坛系统2层数据流图}{Data Flow Diagram for Level 2 of Communication Forum System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/论坛管理/5.3 交流管理/tab_交流管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/论坛管理/5.3 交流管理/tab_交流管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/论坛管理/5.3 交流管理/tab_交流管理_文件词条描述}
+
+\subsubsection{志愿交友系统}
+以下是志愿交友系统的 1 层数据流图、加工子图以及对应的数据字典和文件。
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/社交管理/S_1.pdf}} 
+    \bicaption{志愿交友系统1层数据流图}{Data Flow Diagram for Level 1 of Volunteer Social System}
+    \end{figure}
+    
+\paragraph{交友管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/社交管理/S_2-1.pdf}} 
+    \bicaption{志愿交友系统2层数据流图}{Data Flow Diagram for Level 2 of Volunteer Social System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/社交管理/6.1 交友管理/tab_交友管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/社交管理/6.1 交友管理/tab_交友管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/社交管理/6.1 交友管理/tab_交友管理_文件词条描述}
+
+
+\paragraph{消息管理}~{}
+\\
+\begin{figure}[H]
+    \center{\includegraphics[width=0.95\textwidth]  {fig/社交管理/S_2-2.pdf}} 
+    \bicaption{志愿交友系统2层数据流图}{Data Flow Diagram for Level 2 of Volunteer Social System}
+    \end{figure}
+    
+（1）数据加工词条描述说明
+\input{SAD/tab/社交管理/6.2 消息管理/tab_消息管理_加工词条描述}
+
+（2）数据流词条描述说明
+\input{SAD/tab/社交管理/6.2 消息管理/tab_消息管理_数据流词条描述}
+
+（3）文件词条描述
+\input{SAD/tab/社交管理/6.2 消息管理/tab_消息管理_文件词条描述}
+
+
+
+
+
+\newpage

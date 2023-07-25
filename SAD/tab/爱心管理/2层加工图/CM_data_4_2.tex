@@ -1,0 +1,141 @@
+\begin{table}[H]  
+\caption{``项目信息"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   项目信息 \\
+        \hline
+        \quad 简述:  & 志愿团队提交资助志愿项目的信息 \\
+        \hline
+        \quad 来源:  & 源点``志愿团队" \\
+        \hline
+        \quad 去向:  & 加工``可资助项目审核" \\
+        \hline
+        \quad 组成:  & 项目ID+志愿团队ID+项目时间+可报名人数+项目描述 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{``不合格项目"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  不合格项目 \\
+        \hline
+        \quad 简述:  & 经系统审核后，不合格的受资助项目 \\
+        \hline
+        \quad 来源:  & 加工``可资助项目审核"\\
+        \hline
+        \quad 去向:  & 加工``爱心捐助" \\
+        \hline
+        \quad 组成:  & 项目信息  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``审核通过项目"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   审核通过项目 \\
+        \hline
+        \quad 简述:  & 经系统审核后，合格的受资助项目 \\
+        \hline
+        \quad 来源:  & 加工``爱心捐款" \\
+        \hline
+        \quad 去向:  & 加工``可资助项目审核" \\
+        \hline
+        \quad 组成:  & 项目信息  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``捐款资助明细"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   捐款资助明细 \\
+        \hline
+        \quad 简述:  & 捐款者对志愿项目的捐款信息 \\
+        \hline
+        \quad 来源:  & 源点``捐款人" \\
+        \hline
+        \quad 去向:  & 加工``爱心捐款" \\
+        \hline
+        \quad 组成:  & 项目ID+用户ID+用户名+捐款金额+支付方式+捐款留言  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``资助公示"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   资助公示 \\
+        \hline
+        \quad 简述:  & 对资助项目的受资助情况进行公示 \\
+        \hline
+        \quad 来源:  & 加工``爱心捐款" \\
+        \hline
+        \quad 去向:  & 源点``政府相关部门" \\
+        \hline
+        \quad 组成:  & 志愿团队ID+项目描述+资助金额  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``捐款清单"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  捐款清单 \\
+        \hline
+        \quad 简述:  & 项目获得的爱心捐款汇总 \\
+        \hline
+        \quad 来源:  & 加工``爱心捐款" \\
+        \hline
+        \quad 去向:  &  加工``项目打款"\\
+        \hline
+        \quad 组成:  & 志愿团队ID+项目ID+资助金额  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``公益汇款"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  公益汇款 \\
+        \hline
+        \quad 简述:  & 对公益项目对应的志愿团队进行捐款发放 \\
+        \hline
+        \quad 来源:  & 加工``项目打款" \\
+        \hline
+        \quad 去向:  & 源点``志愿团队" \\
+        \hline
+        \quad 组成:  & 志愿团队ID+资助金额 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+

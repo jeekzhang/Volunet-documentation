@@ -1,0 +1,64 @@
+\begin{table}[H]  
+\caption{“消息发送”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  消息发送 \\
+        \hline
+        \quad 编号:  & 6.2.1 \\
+        \hline
+        \quad 简述:  & 发送消息的功能 \\
+        \hline
+        \quad 输入:  & 消息发送记录\\
+        \hline
+        \quad 输出:  & 消息信息 \\
+        \hline
+        \quad 逻辑:  & 用户向好友发送交流信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“消息发送”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 发送时间
+        \STATE Generate 消息ID 
+        \STATE Write 消息发送记录 + 消息ID + 发送时间 To 信箱
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“消息接收”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   消息接收 \\
+        \hline
+        \quad 编号:  & 6.2.2 \\
+        \hline
+        \quad 简述:  & 展示自己的所有消息 \\
+        \hline
+        \quad 输入:  & 消息信息 \\
+        \hline
+        \quad 输出:  & 消息接收记录 \\
+        \hline
+        \quad 逻辑:  & 返回自己收到的所有消息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“消息接收”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Select Items In 信箱 Match 用户ID
+        \STATE Write 用户ID1, 用户ID2, 消息内容 To 消息接收记录
+    \end{algorithmic} 
+\end{algorithm}

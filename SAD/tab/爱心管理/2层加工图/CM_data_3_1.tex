@@ -1,0 +1,100 @@
+\begin{table}[H]  
+    \caption{``可资助项目审核"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   可资助项目审核 \\
+            \hline
+            \quad 编号:  & 3.2.1 \\
+            \hline
+            \quad 简述:  & 审核志愿项目，确定合规、可资助的项目 \\
+            \hline
+            \quad 输入:  & 项目信息\\
+            \hline
+            \quad 输出:  & 审核通过项目、不合格项目 \\
+            \hline
+            \quad 逻辑:  & 根据项目信息，检查项目资质，若检查不合格则返回不合格项目，合格则生成审核通过项目。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“可资助项目审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 项目信息} 
+        \STATE Generate 审核通过项目信息 Based on 项目信息
+        \ELSE
+        \STATE Generate 不合格项目信息 Based on 项目信息
+        \STATE Return 不合格项目信息
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+    
+    \begin{table}[H]  
+    \caption{``爱心捐款"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   爱心捐款 \\
+            \hline
+            \quad 编号:  & 3.2.2 \\
+            \hline
+            \quad 简述:  & 管理爱心人士对志愿项目的捐款 \\
+            \hline
+            \quad 输入:  & 捐款资助明细、审核通过项目\\
+            \hline
+            \quad 输出:  & 资助公示、捐助清单、爱心人士信息 \\
+            \hline
+            \quad 逻辑:  & 用于接收和管理爱心人士对某志愿项目的捐款，将某项目的资助进行汇总，并对款项进行公示，再留存捐款资助明细中的捐款金额和用户名，作为爱心人士信息，用作爱心反馈操作。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“爱心捐款”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Select Sum（资助捐款）as 项目资助 Group by 志愿项目
+        \STATE Generate 资助公示 Base on 项目资助
+        \STATE Save 捐款金额和用户名 as 爱心人士信息 Base on 捐款资助明细
+    \end{algorithmic} 
+\end{algorithm}
+    
+    \begin{table}[H]  
+    \caption{``项目打款"加工词条描述}  
+    \begin{center}  
+        \begin{tabular}{l p{11cm}} 
+            \hline
+            \quad 名称:  &   项目打款 \\
+            \hline
+            \quad 编号:  & 3.2.3 \\
+            \hline
+            \quad 简述:  & 将爱心人士的捐款转给对应志愿团队 \\
+            \hline
+            \quad 输入:  & 捐款清单 \\
+            \hline
+            \quad 输出:  & 公益汇款 \\
+            \hline
+            \quad 逻辑:  & 资金汇总后后，通过捐款清单中的项目编号，志愿团队名和捐款金额汇总，统一打款给对应志愿团队。 \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \end{table}
+    
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“项目打款”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1] 
+        \STATE Match 项目ID、志愿团队名和捐款金额汇总 of 捐款清单
+        \STATE Add 捐款 to 对应团队账户
+    \end{algorithmic} 
+\end{algorithm}

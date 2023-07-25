@@ -1,0 +1,136 @@
+\begin{table}[H]  
+\caption{“课程状况查询”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 课程状况查询 \\
+        \hline
+        \quad 编号: & 4.2.1 \\
+        \hline
+        \quad 简述: & 查询课程状况的功能 \\
+        \hline
+        \quad 输入: & 选课申请书、课程信息、用户权限 \\
+        \hline
+        \quad 输出: & 人数已满提示、选课信息 \\
+        \hline
+        \quad 逻辑: & 指志愿者查询课程信息和课程人数。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“课程状况查询”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 课程信息
+        \STATE Generate 选课申请书 Based On 用户权限
+        \STATE Write 课程状况分析报表字段 To 选课信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“选课设置”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 选课设置 \\
+        \hline
+        \quad 编号: & 4.2.2 \\
+        \hline
+        \quad 简述: & 设置学生选课情况的功能 \\
+        \hline
+        \quad 输入: & 选课设置、课程信息\\
+        \hline
+        \quad 输出: & 学生修读情况 \\
+        \hline
+        \quad 逻辑: & 为志愿者提供不同课程选择和设置，同时导入课程信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“选课设置”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 课程名 + 课程类别 From 可选课程信息
+        \STATE Insert 课程名 + 课程类别 Into 学生修读情况
+    \end{algorithmic} 
+\end{algorithm}
+
+
+
+\begin{table}[H]  
+\caption{“上课信息处理”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 上课信息处理 \\
+        \hline
+        \quad 编号: & 4.2.3 \\
+        \hline
+        \quad 简述: & 处理学生上课信息的功能 \\
+        \hline
+        \quad 输入: & 上课信息、学生修读情况 \\
+        \hline
+        \quad 输出: & 学生修读情况 \\
+        \hline
+        \quad 逻辑: & 通过在线方式获取、记录、整理和分析志愿者的学习情况和表现。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“上课信息处理”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Select Items In 课程状况 Match 用户ID
+        \STATE Write 用户ID, 课程修读情况, 消息内容 To 学生修读情况
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“结课证书颁发”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 结课证书颁发 \\
+        \hline
+        \quad 编号: & 4.2.4 \\
+        \hline
+        \quad 简述: & 给志愿者颁发结课证书的功能 \\
+        \hline
+        \quad 输入: & 学生修读情况 \\
+        \hline
+        \quad 输出: & 结课证书 \\
+        \hline
+        \quad 逻辑: & 完成一定的课程学习后，由相关机构颁发证书，证明志愿者完成该课程学习。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“结课证书颁发”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 结课证书ID
+        \STATE Get 系统时间 As 颁发时间
+        \STATE Set 课程名 + 用户ID As 证书信息
+        \STATE Write 颁发时间 + 证书信息 To 结课证书
+    \end{algorithmic} 
+\end{algorithm}

@@ -1,0 +1,98 @@
+\begin{table}[H]  
+\caption{“团队入驻”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   团队入驻 \\
+        \hline
+        \quad 编号:  & 1.3.1 \\
+        \hline
+        \quad 简述:  & 生成供审核的用户初始信息 \\
+        \hline
+        \quad 输入:  & 团队入驻信息 \\
+        \hline
+        \quad 输出:  & 团队初始信息\\
+        \hline
+        \quad 逻辑:  & 根据团队填写的入驻信息生成团队初始信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“团队入驻”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 团队ID
+        \STATE Write 团队入驻信息 + 团队ID To 团队初始信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“入驻审核”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   入驻审核 \\
+        \hline
+        \quad 编号:  & 1.3.2 \\
+        \hline
+        \quad 简述:  & 系统管理员审核团队入驻的功能 \\
+        \hline
+        \quad 输入:  & 团队初始信息 \\
+        \hline
+        \quad 输出:  & 入驻审核反馈、团队信息 \\
+        \hline
+        \quad 逻辑:  & 系统管理员审核团队信息，并给出审核反馈。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“入驻审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \IF{Pass Check 团队初始信息} 
+        \STATE Write 团队初始信息 To 团队信息
+        \STATE Write 入驻审核反馈字段  To 入驻审核反馈
+        \ELSE
+        \STATE Write 入驻审核反馈字段 To 入驻审核反馈 
+        \ENDIF 
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“信息修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &   信息修改 \\
+        \hline
+        \quad 编号:  & 1.3.3 \\
+        \hline
+        \quad 简述:  & 修改团队信息的功能 \\
+        \hline
+        \quad 输入:  & 团队修改信息\\
+        \hline
+        \quad 输出:  & 团队信息\\
+        \hline
+        \quad 逻辑:  & 根据团队修改信息修改团队信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“信息修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Update 团队修改信息 In 团队信息 Match 团队ID
+    \end{algorithmic} 
+\end{algorithm}

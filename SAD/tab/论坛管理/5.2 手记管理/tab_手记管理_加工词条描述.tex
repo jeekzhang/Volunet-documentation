@@ -1,0 +1,197 @@
+\begin{table}[H]  
+\caption{“手记编写”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  手记编写 \\
+        \hline
+        \quad 编号:  & 5.2.1 \\
+        \hline
+        \quad 简述:  & 手记编写的功能 \\
+        \hline
+        \quad 输入:  & 手记编写信息 \\
+        \hline
+        \quad 输出:  & 手记信息 \\
+        \hline
+        \quad 逻辑:  & 保存用户资讯的内容信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记编写”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 手记ID
+        \STATE Get 系统时间 As 发布时间
+        \STATE Set 最后编辑时间 As 发布时间
+        \STATE Write 手记信息 + 手记ID + 发布时间 +最后编辑时间 To 初始资讯信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“手记修改”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  手记修改 \\
+        \hline
+        \quad 编号:  & 5.2.2 \\
+        \hline
+        \quad 简述:  & 对手记进行修改的功能 \\
+        \hline
+        \quad 输入:  & 手记修改信息 \\
+        \hline
+        \quad 输出:  & 修改的手记信息 \\
+        \hline
+        \quad 逻辑:  & 完成用户修改手记的处理。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H] 
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记修改”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 手记ID From 手记修改信息
+        \STATE Update Item In 手记信息 Match 手记ID With 资讯修改信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“手记审核”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  手记审核 \\
+        \hline
+        \quad 编号:  & 5.2.3 \\
+        \hline
+        \quad 简述:  & 系统管理员审核手记的功能 \\
+        \hline
+        \quad 输入:  & 手记审核意见 \\
+        \hline
+        \quad 输出:  & 手记审核信息 \\
+        \hline
+        \quad 逻辑:  & 系统管理员审核手记信息，并给出手记的修改要求。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记审核”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Get 系统时间 As 审核时间
+        \STATE Write 手记审核意见 + 审核时间 To 手记审核信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“手记评论”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  手记评论 \\
+        \hline
+        \quad 编号:  & 5.2.4 \\
+        \hline
+        \quad 简述:  & 对手记进行评论的功能 \\
+        \hline
+        \quad 输入:  & 手记评论记录 \\
+        \hline
+        \quad 输出:  & 手记评论信息 \\
+        \hline
+        \quad 逻辑:  & 用户给出对手记的评论。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记评论”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Create 评论ID
+        \STATE Get 系统时间 As 提交时间
+        \STATE Write 手记评论记录+评论ID+提交时间+手记评论信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“推送手记”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  推送手记 \\
+        \hline
+        \quad 编号:  & 5.2.5 \\
+        \hline
+        \quad 简述:  & 对手记进推送的功能 \\
+        \hline
+        \quad 输入:  & 手记信息 \\
+        \hline
+        \quad 输出:  & 手记推送信息 \\
+        \hline
+        \quad 逻辑:  & 根据手记信息筛选出热度较高的手记推送信息。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记推送”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 手记信息
+        \STATE Get 手记ID From 手记信息
+        \STATE Select 对应手记评论 From 手记评论信息 Match 手记ID
+        \STATE Write 手记信息 + 对应手记评论 To 手记推送信息
+    \end{algorithmic} 
+\end{algorithm}
+
+\begin{table}[H]  
+\caption{“手记审计”加工词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记审计 \\
+        \hline
+        \quad 编号:  & 5.2.6 \\
+        \hline
+        \quad 简述:  & 手记资讯的功能 \\
+        \hline
+        \quad 输入:  & 手记审核信息 \\
+        \hline
+        \quad 输出:  & 手记管理审计报表 \\
+        \hline
+        \quad 逻辑:  & 根据手记审核信息分析生成手记管理审计报表。 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{algorithm}[H]
+    \renewcommand{\thealgorithm}{}
+    \caption{“手记审计”加工小说明} 
+    \label{alg3} 
+    \begin{algorithmic}[1]
+        \STATE Analyze 手记审核信息
+        \STATE Generate 手记审核信息统计分析报表字段 Based On 手记审核信息
+        \STATE Write 手记审核信息统计分析报表字段 To 手记审计报表
+    \end{algorithmic} 
+\end{algorithm}

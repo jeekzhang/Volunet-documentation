@@ -1,0 +1,101 @@
+\begin{table}[H]  
+\caption{``反馈表"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈表 \\
+        \hline
+        \quad 简述:  & 志愿者对课程反馈的信息 \\
+        \hline
+        \quad 来源:  & 源点``志愿者" \\
+        \hline
+        \quad 去向:  & 加工``反馈生成" \\
+        \hline
+        \quad 组成:  & 用户反馈ID+用户反馈信息+用户ID+用户名+课程ID+课程名+授课人名+反馈表提交时间 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{``授课查询结果"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课查询结果 \\
+        \hline
+        \quad 简述:  & 授课人对课程的查询结果 \\
+        \hline
+        \quad 来源:  & 加工``反馈查询" \\
+        \hline
+        \quad 去向:  & 源点``授课人" \\
+        \hline
+        \quad 组成:  & 用户反馈ID+用户反馈信息+课程ID+课程名+课程内容  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``授课查询条件"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 授课查询条件 \\
+        \hline
+        \quad 简述: & 授课人对课程的查询条件 \\
+        \hline
+        \quad 来源: & 源点``授课人" \\
+        \hline
+        \quad 去向: & 加工``反馈查询" \\
+        \hline
+        \quad 组成: & 课程ID+课程名+课程内容+授课人ID+授课人名+查询时间  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``被删除反馈信息"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 被删除反馈信息 \\
+        \hline
+        \quad 简述: & 被系统管理员删除的反馈信息 \\
+        \hline
+        \quad 来源: & 源点``系统管理员" \\
+        \hline
+        \quad 去向: & 加工``反馈审核删除"\\
+        \hline
+        \quad 组成: & 审核删除原因+审核删除条规+审核删除时间+用户反馈ID+用户反馈信息  \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{``反馈删除通知"数据流词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称: & 反馈删除通知 \\
+        \hline
+        \quad 简述: & 发给志愿者的反馈删除通知 \\
+        \hline
+        \quad 来源: & 加工``反馈审核删除" \\
+        \hline
+        \quad 去向: & 源点``志愿者" \\
+        \hline
+        \quad 组成: & 用户反馈ID+用户反馈信息+用户ID+用户名+审核删除原因+审核删除条规+审核删除时间 \\
+        \hline
+    \end{tabular}
+    \label{tab1}
+\end{center}
+\end{table}
+
