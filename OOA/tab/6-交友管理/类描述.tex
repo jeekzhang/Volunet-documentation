@@ -1,0 +1,187 @@
+% 用户、志愿者、结果、消息、申请、系统、交友管理系统、消息管理系统
+\begin{table}[H]  
+\caption{“用户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  用户 \\
+        \hline
+        \quad 编号:  & 6.1 \\
+        \hline
+        \quad 英文:  &  User \\
+        \hline
+        \quad 简述:  & 使用交友管理系统和消息管理系统的个人的统称 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 志愿者 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿者 \\
+        \hline
+        \quad 编号:  & 6.2 \\
+        \hline
+        \quad 英文:  &  Volunteer \\
+        \hline
+        \quad 简述:  & 使用交友管理系统和消息管理系统的个人 \\
+        \hline
+        \quad 属性:  & gender、interests、availability \\
+        \hline 
+        \quad 操作:  & setInterests()、getInterests()、setAvailability()、getAvailability()、sendApplication()、acceptApplications()、sendMessage()、receiveMessage()、queryUsers()、queryFriends()\\
+        \hline
+        \quad 相关类:  & 用户、交友管理系统、消息管理系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{“结果”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  结果 \\
+        \hline
+        \quad 编号:  & 6.3 \\
+        \hline
+        \quad 英文:  &  Result \\
+        \hline
+        \quad 简述:  & 完成交友管理、消息管理后所产生的输出、效果或影响 \\
+        \hline
+        \quad 属性:  & id、status、message、data\\
+        \hline
+        \quad 操作:  & getId()、setStatus()、getStatus()、setMessage()、getMessage()、setData()、getData() \\
+        \hline
+        \quad 相关类:  & 消息、申请 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“消息”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  消息 \\
+        \hline
+        \quad 编号:  & 6.4 \\
+        \hline
+        \quad 英文:  &  Message \\
+        \hline
+        \quad 简述:  & 好友之间相互发送的文本、图像、视频信息 \\
+        \hline
+        \quad 属性:  & sender、receiver、timestamp \\
+        \hline
+        \quad 操作:  & setSender()、getSender()、setReceiver()、getReceiver()、setTimestamp()、getTimestamp()\\
+        \hline
+        \quad 相关类:  & 消息管理、志愿者、结果\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[H]  
+\caption{“申请”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  申请 \\
+        \hline
+        \quad 编号:  & 6.5 \\
+        \hline
+        \quad 英文:  &  Application \\
+        \hline
+        \quad 简述:  & 队其他用户请求添加好友的文件 \\
+        \hline
+        \quad 属性:  & applicant、target\\
+        \hline
+        \quad 操作:  & setApplicant()、getApplicant()、setTarget()、getTarget()\\
+        \hline
+        \quad 相关类:  & 志愿者、结果、交友管理 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统 \\
+        \hline
+        \quad 编号:  & 6.6 \\
+        \hline
+        \quad 英文:  &  System \\
+        \hline
+        \quad 简述:  & 进行管理的系统的统称 \\
+        \hline
+        \quad 属性:  & id、name、description、version\\
+        \hline
+        \quad 操作:  & start()、stop()、update()\\
+        \hline
+        \quad 相关类:  & 消息管理系统、交友管理系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“交友管理系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  交友管理系统 \\
+        \hline
+        \quad 编号:  & 6.7 \\
+        \hline
+        \quad 英文:  &  FriendManagementSystem \\
+        \hline
+        \quad 简述:  & 负责对交友申请和用户好友进行管理和处理的系统 \\
+        \hline
+        \quad 属性:  & friends\\
+        \hline
+        \quad 操作:  & queryFriends()、deleteFriend()、tagFriend()、updateFriend()、applyFriend()\\
+        \hline
+        \quad 相关类:  & 系统、申请 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“消息管理系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  消息管理系统 \\
+        \hline
+        \quad 编号:  & 6.8 \\
+        \hline
+        \quad 英文:  &  MessageManagementSystem \\
+        \hline
+        \quad 简述:  & 负责管理用户聊天消息和用户之间的消息记录的系统 \\
+        \hline
+        \quad 属性:  & messages\\
+        \hline
+        \quad 操作:  & sendMessages()、receiveMessages()、storeMessages()、deleteMessage()、withdrawMessage()、flagMessage()\\
+        \hline
+        \quad 相关类:  & 系统、消息 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

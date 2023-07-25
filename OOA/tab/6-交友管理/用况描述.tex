@@ -1,0 +1,47 @@
+
+\begin{framed}
+\noindent
+用况名称：交友管理\\
+参与的执行者：志愿者1、志愿者2\\
+前置条件：用户身份为志愿者1，且通过实名认证可以选择用户进行交友申请提交；用户身份为志愿者2，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿者1选择用户进行交友申请时，用况开始
+    \item 志愿者1填写交友申请单
+    \item 志愿者1提交交友申请单
+    \item 志愿者2对提交的好友申请进行确认：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 确认通过：好友添加成功，志愿者1相关用况结束
+          \item 确认失败：将拒绝信息反馈给志愿者1，志愿者可以选择转到1继续，或者用况结束
+      \end{enumerate}
+    \item 将志愿者1加入志愿者2好友列表中，相关用况结束
+\end{enumerate}
+\noindent
+可选路径：\par
+    在活动流程中，志愿者1可以在交友申请未被志愿者2响应前的任何时间点取消交友申请。\\
+后置条件：将志愿者1和志愿者2互相加入对方的好友列表中，同时检查是否以前是好友，提醒恢复聊天记录
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：消息管理\\
+参与的执行者：志愿者1、志愿者2\\
+前置条件：志愿者1和志愿者2为好友，且双方账号状态正常；志愿者1已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿者1进入聊天界面时，用况开始
+    \item 志愿者1填写聊天消息
+    \item 志愿者1发送聊天消息
+    \item 志愿者1选择是否撤回聊天消息：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 选择不撤回：消息继续发布，志愿者1相关用况结束
+          \item 选择撤回：将撤回信息反馈给志愿者1和志愿者2，转到2继续
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+    当志愿者1输入单词错误时，系统应该提示志愿者1重新输入正确的信息。如果志愿者1多次输入错误，系统可以提供更详细的指导，以帮助志愿者1完成操作。\\
+后置条件：在志愿者完成聊天消息的发送或保存操作后，消息管理系统确保消息已被成功存储在数据库中
+\end{framed}

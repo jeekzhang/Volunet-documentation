@@ -1,0 +1,371 @@
+% 捐款者、志愿团队、购买者、公益商户、系统管理员、订单、证书、爱心证书、名单、鸣谢名单、系统、授课系统、订单系统、捐款系统以及爱心反馈系统
+\begin{table}[H]  
+\caption{“用户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  用户 \\
+        \hline
+        \quad 编号:  & 3.1 \\
+        \hline
+        \quad 英文:  &  User \\
+        \hline
+        \quad 简述:  & 使用爱心捐助系统的个人或组织的统称 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 捐款者、志愿团队、购买者、公益商户、系统管理员 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿团队”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿团队 \\
+        \hline
+        \quad 编号:  & 3.2 \\
+        \hline
+        \quad 英文:  &  Team \\
+        \hline
+        \quad 简述:  & 使用爱心捐助系统接收项目捐助的组织 \\
+        \hline
+        \quad 属性:  & category、team\_name \\
+        \hline 
+        \quad 操作:  & setProject()、getProject()、queryProject()、queryDonor()、queryDonation()、applyCourse()、getProjectAnalysis()、modifyProject()、getLoveFeedback()\\
+        \hline
+        \quad 相关类:  & 用户、捐款系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“捐款者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  捐款者 \\
+        \hline
+        \quad 编号:  & 3.3 \\
+        \hline
+        \quad 英文:  &  Donor \\
+        \hline
+        \quad 简述:  & 使用爱心捐助系统对项目进行捐款的人 \\
+        \hline
+        \quad 属性:  & category、donor\_name\\
+        \hline
+        \quad 操作:  & setGender()、getGender()、queryTeam()、queryProject()、submitDonation()、queryDonation()、queryCertificate()、queryAcknowledgementList()、\\
+        \hline
+        \quad 相关类:  & 用户、捐款系统、爱心证书 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“购买者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 购买者 \\
+        \hline
+        \quad 编号:  & 3.4 \\
+        \hline
+        \quad 英文:  &  Buyer \\
+        \hline
+        \quad 简述:  & 使用爱心捐助系统购买公益商品的人 \\
+        \hline
+        \quad 属性:  & gender、buyer\_name \\
+        \hline
+        \quad 操作:  & addOrder()、getOrder()、queryOrder()、modifyOrder()、getLoveFeedback() \\
+        \hline
+        \quad 相关类:  & 用户、公益商户、订单、订单系统、爱心证书 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“公益商户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  公益商户 \\
+        \hline
+        \quad 编号:  & 3.5 \\
+        \hline
+        \quad 英文:  &  CharitableMerchant \\
+        \hline
+        \quad 简述:  & 在爱心捐助系统售卖公益商品的人或组织 \\
+        \hline
+        \quad 属性:  & category、charitable\_merchant\_name \\
+        \hline
+        \quad 操作:  & handleOrder()、getOrder()、queryOrder()、queryBuyer()、getOrderAnalysis()、getLoveFeedback()\\
+        \hline
+        \quad 相关类:  & 用户、订单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统管理员”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统管理员 \\
+        \hline
+        \quad 编号:  & 3.6 \\
+        \hline
+        \quad 英文:  &  Administrator \\
+        \hline
+        \quad 简述:  & 管理爱心捐助系统，进行信息审核的人 \\
+        \hline
+        \quad 属性:  & permissions \\
+        \hline
+        \quad 操作:  & updateUser()、updateLoveFeedback()、reviewQualifications()、reviewDonation()、reviewOrder()、manageCharitableMerchant()、manageBuyer()、manageTeam()、manageDonor()
+\\
+        \hline
+        \quad 相关类:  & 用户、爱心反馈系统、收款系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“订单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  订单 \\
+        \hline
+        \quad 编号:  & 3.7 \\
+        \hline
+        \quad 英文:  &  Order \\
+        \hline
+        \quad 简述:  & 购买者对公益商品所提交的购买请求 \\
+        \hline
+        \quad 属性:  & order\_id、buyer\_id、charitablemerchant\_id、order\_text、order\_date \\
+        \hline
+        \quad 操作:  & addOrder()、deleteOrder()、updateOrder()、getOrder()、handelOrder()\\
+        \hline
+        \quad 相关类:  & 购买者、公益商户、订单系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“证书”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  证书 \\
+        \hline
+        \quad 编号:  & 3.8 \\
+        \hline
+        \quad 英文:  &  Certificate \\
+        \hline
+        \quad 简述:  & 对个人或组织具有某种能力、资格或成就的认证文件 \\
+        \hline
+        \quad 属性:  & cert\_id、cert\_name、issue、issue\_date\\
+        \hline
+        \quad 操作:  & awardCert()、revokeCert() \\
+        \hline
+        \quad 相关类:  & 爱心证书 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“爱心证书”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  爱心证书 \\
+        \hline
+        \quad 编号:  & 3.9 \\
+        \hline
+        \quad 英文:  &  LoveCertificate \\
+        \hline
+        \quad 简述:  & 对爱心人士进行感谢和认证的文件 \\
+        \hline
+        \quad 属性:  & user\_name、content\\
+        \hline
+        \quad 操作:  & setUserName()、setContent()\\
+        \hline
+        \quad 相关类:  & 证书、捐款者、购买者、订单系统、捐款系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“名单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  名单 \\
+        \hline
+        \quad 编号:  & 3.10 \\
+        \hline
+        \quad 英文:  &  List \\
+        \hline
+        \quad 简述:  & 按照一定标准或规则列出的人员或事物清单 \\
+        \hline
+        \quad 属性:  &list\_id、list\_name、list\_content、create\_date\\
+        \hline
+        \quad 操作:  & addList()、deleteList()、updateList()、getList() \\
+        \hline
+        \quad 相关类:  & 鸣谢名单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“鸣谢名单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  鸣谢名单 \\
+        \hline
+        \quad 编号:  & 3.11 \\
+        \hline
+        \quad 英文:  &  AcknowledgementList \\
+        \hline
+        \quad 简述:  & 感谢爱心人士的公示名单 \\
+        \hline
+        \quad 属性:  & user\_name、donation\_money\\
+        \hline
+        \quad 操作:  & setUserName()、updateDonationMoney()
+\\
+        \hline
+        \quad 相关类:  & 名单、爱心反馈系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统 \\
+        \hline
+        \quad 编号:  & 3.12 \\
+        \hline
+        \quad 英文:  &  System \\
+        \hline
+        \quad 简述:  & 爱心捐助系统的简称 \\
+        \hline
+        \quad 属性:  & id、name、description、version\\
+        \hline
+        \quad 操作:  & start()、stop()、update()\\
+        \hline
+        \quad 相关类:  & 爱心反馈系统、收款系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“爱心反馈系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  爱心反馈系统 \\
+        \hline
+        \quad 编号:  & 3.13 \\
+        \hline
+        \quad 英文:  &  LoveFeedbackSystem \\
+        \hline
+        \quad 简述:  & 负责对爱心人士进行反馈和感谢的系统 \\
+        \hline
+        \quad 属性:  & lovefeedbacks\\
+        \hline
+        \quad 操作:  & addLoveFeedback()、removeLoveFeedback()、getLoveFeedbacks()\\
+        \hline
+        \quad 相关类:  & 系统、系统管理员、爱心证书、鸣谢名单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“收款系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  收款系统 \\
+        \hline
+        \quad 编号:  & 3.14 \\
+        \hline
+        \quad 英文:  &  PaymentSystem \\
+        \hline
+        \quad 简述:  & 负责捐助款项管理的系统 \\
+        \hline
+        \quad 属性:  & payment\\
+        \hline
+        \quad 操作:  & addPayment()、removePayment()、getPayment()、showProgress()、paymentChat()
+\\
+        \hline
+        \quad 相关类:  & 系统、系统管理员、订单系统、捐款系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“订单系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  订单系统 \\
+        \hline
+        \quad 编号:  & 3.15 \\
+        \hline
+        \quad 英文:  &  OrderSystem \\
+        \hline
+        \quad 简述:  & 负责订单管理的系统 \\
+        \hline
+        \quad 属性:  & orders、create\_date\\
+        \hline
+        \quad 操作:  & addOrder()、removeOrder()、getOrders()、getOrderID()、getCreateDate()、orderAnalysis()\\
+        \hline
+        \quad 相关类:  & 收款系统、订单、购买者、爱心证书、公益商户 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“捐款系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  捐款系统 \\
+        \hline
+        \quad 编号:  & 3.16 \\
+        \hline
+        \quad 英文:  &  DonationSystem \\
+        \hline
+        \quad 简述:  & 负责捐款管理的系统 \\
+        \hline
+        \quad 属性:  & donations、donation\_date\\
+        \hline
+        \quad 操作:  & addDonation()、removeDonation()、getDonations()、donationAnalysis()、getDonationDate()\\
+        \hline
+        \quad 相关类:  & 收款系统、捐款者、爱心证书、志愿团队 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

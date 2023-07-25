@@ -1,0 +1,582 @@
+\begin{table}[H]  
+\caption{“系统管理员”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统管理员 \\
+        \hline
+        \quad 编号:  & 5.1 \\
+        \hline
+        \quad 英文:  &  Administrator \\
+        \hline
+        \quad 简述:  & 交流论坛系统中的管理员 \\
+        \hline
+        \quad 属性:  & id、username、password、permissions \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、manageAuditing()、InformationReviewing() \\
+        \hline
+        \quad 相关类:  & 志愿者、志愿团队、政府机构、管理界面 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“用户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  用户 \\
+        \hline
+        \quad 编号:  & 5.2 \\
+        \hline
+        \quad 英文:  &  User \\
+        \hline
+        \quad 简述:  & 交流论坛系统中参与的个体的统称 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 志愿者、志愿团队、政府机构、管理界面 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿者 \\
+        \hline
+        \quad 编号:  & 5.3 \\
+        \hline
+        \quad 英文:  &  Volunteer \\
+        \hline
+        \quad 简述:  & 注册登录交流管理系统的个人 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact、VolunteeringTeam \\
+        \hline 
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout()\\
+        \hline
+        \quad 相关类:  & 用户 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿团队”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿团队 \\
+        \hline
+        \quad 编号:  & 5.4 \\
+        \hline
+        \quad 英文:  &  Volunteering Team \\
+        \hline
+        \quad 简述:  & 注册登录交流管理系统的团体 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 用户 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“政府机构”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 政府机构 \\
+        \hline
+        \quad 编号:  & 5.5 \\
+        \hline
+        \quad 英文:  &  Government Department \\
+        \hline
+        \quad 简述:  & 注册登录交流管理系统的政府机构 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact、departmentName \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 用户 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“管理界面”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 管理界面 \\
+        \hline
+        \quad 编号:  & 5.7 \\
+        \hline
+        \quad 英文:  &  Management Interface \\
+        \hline
+        \quad 简述:  & 用户管理交流信息的界面 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & login()、logout()、setMode() \\
+        \hline
+        \quad 相关类: & 用户、资讯管理界面、手记管理界面、论坛管理界面\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+%资讯管理
+
+\begin{table}[H]  
+\caption{“资讯管理界面”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯管理界面 \\
+        \hline
+        \quad 编号:  & 5.8 \\
+        \hline
+        \quad 英文:  &  News Management Interface \\
+        \hline
+        \quad 简述:  & 用户管理资讯的界面 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & login()、logout()、SearchNew()、serachNewsCategory()、manageNewsCategory()、editNews( )\\
+        \hline
+        \quad 相关类: & 管理界面、资讯类别管理、资讯管理、资讯评论管理\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯类别管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯类别管理 \\
+        \hline
+        \quad 编号:  & 5.9 \\
+        \hline
+        \quad 英文:  &  News Category Management\\
+        \hline
+        \quad 简述:  & 用户管理资讯类别的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & addNewsCategory( )、deleteNewsCategory()、searchNewCategory( )\\
+        \hline
+        \quad 相关类: & 资讯管理界面、资讯类别\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯管理 \\
+        \hline
+        \quad 编号:  & 5.10 \\
+        \hline
+        \quad 英文:  &  News Management\\
+        \hline
+        \quad 简述:  & 用户管理资讯信息的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchNews( )、returnNewsInCategory( )、searchNewsById()\\
+        \hline
+        \quad 相关类: & 资讯管理界面、资讯类别、资讯信息、资讯评论\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯评论管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯评论管理 \\
+        \hline
+        \quad 编号:  & 5.11 \\
+        \hline
+        \quad 英文:  &  News Comment Management\\
+        \hline
+        \quad 简述:  & 用户管理资讯所属评论的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchNewsComment( ) \\
+        \hline
+        \quad 相关类: & 资讯管理界面、资讯评论\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯类型”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯类型 \\
+        \hline
+        \quad 编号:  & 5.12 \\
+        \hline
+        \quad 英文:  &  News Category\\
+        \hline
+        \quad 简述:  & 资讯的类型 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchNew( )、returnNewsInCategory( )、searchNewsById()\\
+        \hline
+        \quad 相关类: & 资讯管理、资讯类型管理、资讯信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯信息”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯信息 \\
+        \hline
+        \quad 编号:  & 5.13 \\
+        \hline
+        \quad 英文:  &  News Information\\
+        \hline
+        \quad 简述:  & 资讯的信息 \\
+        \hline
+        \quad 属性:  & newsID、newsName、newsContent、newsLength、newsAuthor \\
+        \hline
+        \quad 操作:  & addNews( )、editNews( )\\
+        \hline
+        \quad 相关类: & 资讯管理、资讯类别、资讯评论、审计报表生成\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“资讯评论”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯评论 \\
+        \hline
+        \quad 编号:  & 5.14 \\
+        \hline
+        \quad 英文:  &  News Comment\\
+        \hline
+        \quad 简述:  & 资讯的评论 \\
+        \hline
+        \quad 属性:  & newsCommentID、newsCommentContent、newsCommentLength、newsCommentAuthor\\
+        \hline
+        \quad 操作:  & addNewsComment( )、ModifyNewsComment( )、DeleteNewsComment( )、SearchNewsComment( ) \\
+        \hline
+        \quad 相关类: & 资讯管理、资讯评论管理、资讯信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+%手记管理
+
+\begin{table}[H]  
+\caption{“手记管理界面”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记管理界面 \\
+        \hline
+        \quad 编号:  & 5.15 \\
+        \hline
+        \quad 英文:  &  Journal Management Interface \\
+        \hline
+        \quad 简述:  & 用户管理资讯的界面 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & login()、logout()、SearchJournal()、editJournal( )\\
+        \hline
+        \quad 相关类: & 管理界面、手记管理、手记评论管理\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“手记管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记管理 \\
+        \hline
+        \quad 编号:  & 5.16 \\
+        \hline
+        \quad 英文:  &  Journal Management\\
+        \hline
+        \quad 简述:  & 用户管理手记信息的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchJournal( )、searchJournalById()\\
+        \hline
+        \quad 相关类: & 手记管理界面、手记信息、手记评论\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“手记评论管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记评论管理 \\
+        \hline
+        \quad 编号:  & 5.17 \\
+        \hline
+        \quad 英文:  &  Journal Comment Management\\
+        \hline
+        \quad 简述:  & 用户管理手记所属评论的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchjournalComment( ) \\
+        \hline
+        \quad 相关类: & 手记管理界面、手记评论\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“手记信息”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记信息 \\
+        \hline
+        \quad 编号:  & 5.18 \\
+        \hline
+        \quad 英文:  &  Journal Information\\
+        \hline
+        \quad 简述:  & 手记的信息 \\
+        \hline
+        \quad 属性:  & journalID、journalName、journalContent、journalLength、journalAuthor \\
+        \hline
+        \quad 操作:  & addJournal( )、editJournal( )\\
+        \hline
+        \quad 相关类: & 手记管理、手记评论、审计报表生成\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“手记评论”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 手记评论 \\
+        \hline
+        \quad 编号:  & 5.19 \\
+        \hline
+        \quad 英文:  &  journal Comment\\
+        \hline
+        \quad 简述:  & 手记的评论 \\
+        \hline
+        \quad 属性:  & journalCommentID、journalCommentContent、journalCommentLength、journalCommentAuthor\\
+        \hline
+        \quad 操作:  & addJournalComment( )、ModifyJournalComment( )、DeleteJournalComment( )、SearchJournalComment( ) \\
+        \hline
+        \quad 相关类: & 手记管理、手记评论管理、手记信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+%论坛管理
+
+\begin{table}[H]  
+\caption{“论坛管理界面”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 论坛管理界面 \\
+        \hline
+        \quad 编号:  & 5.20 \\
+        \hline
+        \quad 英文:  &  Fourm Management Interface \\
+        \hline
+        \quad 简述:  & 用户管理论坛的界面 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & login()、logout()、SearchPost( )、erachPostSection( )、managePostSection( )、editPost( )\\
+        \hline
+        \quad 相关类: & 管理界面、论坛板块管理、帖子管理、板块管理\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“板块管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 板块管理 \\
+        \hline
+        \quad 编号:  & 5.21 \\
+        \hline
+        \quad 英文:  &  Fourm Section Management\\
+        \hline
+        \quad 简述:  & 用户管理论坛板块的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & addFourmSection( )、ModifyFourmSection( )、DeleteFourmSection( )、SearchFourmSection( )\\
+        \hline
+        \quad 相关类: & 论坛管理界面、论坛板块\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“帖子管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 帖子管理 \\
+        \hline
+        \quad 编号:  & 5.22 \\
+        \hline
+        \quad 英文:  &  Post Management\\
+        \hline
+        \quad 简述:  & 用户管理帖子信息的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchPost( )、returnPostInSection( )、searchPostById()、caculatePostTimesByUserID( )\\
+        \hline
+        \quad 相关类: & 论坛管理界面、帖子信息、板块信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“回帖管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 资讯评论管理 \\
+        \hline
+        \quad 编号:  & 5.23 \\
+        \hline
+        \quad 英文:  &  Post Respond Management\\
+        \hline
+        \quad 简述:  & 用户管理资讯所属评论的系统 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & SearchPostRespondList( )、caculateRespondTimesByUserID( )、caculatePostNumberBySection( ) \\
+        \hline
+        \quad 相关类: & 论坛管理界面、帖子信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“板块信息”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 板块信息 \\
+        \hline
+        \quad 编号:  & 5.24 \\
+        \hline
+        \quad 英文:  &  Section Information\\
+        \hline
+        \quad 简述:  & 论坛板块的信息 \\
+        \hline
+        \quad 属性:  & sectionID\\
+        \hline
+        \quad 操作:  & modifySection()\\
+        \hline
+        \quad 相关类: & 板块管理、帖子管理、帖子信息\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“帖子信息”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 帖子信息 \\
+        \hline
+        \quad 编号:  & 5.25 \\
+        \hline
+        \quad 英文:  &  Post Information\\
+        \hline
+        \quad 简述:  & 帖子的信息 \\
+        \hline
+        \quad 属性:  & PostID、PostName、PostContent、PostLength、PostAuthor、PostSection \\
+        \hline
+        \quad 操作:  & addPost( )、editPost( )\\
+        \hline
+        \quad 相关类: & 帖子管理、回帖管理、板块信息、审计报表生成\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+%审计报表生成
+
+\begin{table}[H]  
+\caption{“审计报表”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  & 审计报表 \\
+        \hline
+        \quad 编号:  & 5.26 \\
+        \hline
+        \quad 英文:  &  Audit Report\\
+        \hline
+        \quad 简述:  & 根据系统信息生成的审计报表 \\
+        \hline
+        \quad 属性:  & currentUser \\
+        \hline
+        \quad 操作:  & GenerateByTime()、GetAuditionRepoet()\\
+        \hline
+        \quad 相关类: & 资讯信息、手记信息、帖子信息、系统管理员\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

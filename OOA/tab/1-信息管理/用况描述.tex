@@ -1,0 +1,94 @@
+
+\begin{framed}
+\noindent
+用况名称：用户管理\\
+参与的执行者：志愿者、系统管理员\\
+前置条件：用户身份为志愿者，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿者进入到用户页面时，用况开始
+    \item 志愿团队进行页面选择并发出操作指令
+    \item 系统对志愿者的操作进行处理：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 用户主页编辑：若有权限则继续执行；否则退回到上一步
+          \item 用户查找：继续执行第8步
+      \end{enumerate}
+    \item 志愿者进入主页编写界面
+    \item 志愿者获取展示列表
+    \item 志愿者按需编辑主页标题、图片和展示列表
+    \item 志愿者编辑完成可预览用户主页，点击确认后提示用户主页成功更新，用况结束
+    \item 志愿者浏览用户主页列表
+    \item 志愿者选择搜索框并按条件查询
+    \item 展示志愿者查询结果，用况结束
+\end{enumerate}
+\noindent
+可选路径：\par
+    在选择提交主页编辑之前的任何时间，志愿团队可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复\\
+后置条件：用户编辑好后的主页会进行更新，替代之前的信息
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：注册管理\\
+参与的执行者：志愿者、系统管理员\\
+前置条件：志愿者需要访问注册页面，系统管理员需要具有管理注册信息的权限，二者均已合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+   \item 志愿者填写必要的信息，如用户名、密码、电子邮件地址等\item 志愿者点击“注册”按钮
+   \item 系统管理员验证用户提供的信息是否有效
+   \item 如果验证通过，系统将用户的信息保存到数据库中，并向志愿者发送确认邮件
+   \item 志愿者收到确认邮件并点击其中的链接以激活账户 
+   \item 志愿者账户激活成功，志愿者可以登录系统
+\end{enumerate}
+\noindent
+可选路径：\par
+     \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 如果用户提供的信息无效，系统将显示错误消息并要求用户更正
+     \item 如果用户没有收到确认邮件，用户可以请求系统重新发送 
+     \end{enumerate} 
+后置条件：用户账户已成功注册并激活，用户可以登录系统
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：组队管理\\
+参与的执行者：志愿者、志愿团队、系统管理员\\
+前置条件：志愿者已经注册并登录到系统中；志愿团队已经创建并发布了一个活动\\
+事件流：\\
+基本路径： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 志愿者在系统中查看到志愿团队发布的活动，并决定加入该活动的团队 \item 志愿者向志愿团队发送加入请求 \item 志愿团队收到请求后，审核志愿者的信息并决定是否接受该志愿者 \item 如果志愿团队接受了志愿者的请求，系统将志愿者加入该团队，并将该团队的信息显示在志愿者的个人主页上 \end{enumerate}
+\noindent
+可选路径：\par
+     如果志愿团队拒绝了志愿者的请求，系统将不会将志愿者加入该团队，并给志愿者发送拒绝信息 \\
+后置条件：志愿者已经加入了志愿团队，并可以参加该团队发布的活动
+
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：团队管理\\
+参与的执行者：志愿团队、系统管理员\\
+前置条件：志愿团队已经注册并登录到系统中，且系统管理员已经授权志愿团队进行团队管理\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 志愿团队登录到系统中 \item 在系统中选择团队管理功能。 \item 在团队管理页面中，可以进行以下操作： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 添加或删除团队成员 \item 分配任务给团队成员。 \item 查看团队成员的任务进度 \item 编辑团队成员的个人信息 \item 禁止或允许团队成员访问系统\end{enumerate} 
+\end{enumerate}
+\noindent
+可选路径： \par
+ \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在团队管理页面中，如果志愿团队没有权限进行某些操作，系统会提示“权限不足”的错误信息 \item 如果团队成员的个人信息不完整或错误，系统管理员可以要求团队成员进行修改  \end{enumerate} 
+后置条件：团队成员的任务分配和进度记录已经更新到系统中；团队成员的个人信息已经保存到系统中
+
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：信息审核\\
+参与的执行者：系统管理员\\
+前置条件：系统中存在需要审核的信息，且系统管理员已经合法登陆到这个系统
+事件流： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 系统管理员登录审核系统 \item 系统管理员选择需要审核的信息 \item 系统管理员查看信息内容，判断是否符合审核标准 \item 如果信息符合审核标准，系统管理员将信息标记为“审核通过”，并记录审核结果 \item 如果信息不符合审核标准，系统管理员将信息标记为“审核不通过”，并记录审核结果 \end{enumerate}
+\noindent
+可选路径： \par
+在步骤3中，如果系统管理员无法判断信息是否符合审核标准，可以将信息标记为“待定”，并将信息转交给其他审核人员审核\\
+后置条件：审核结果被记录在系统中，审核完成
+
+\end{framed}

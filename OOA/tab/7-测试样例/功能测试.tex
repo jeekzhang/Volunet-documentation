@@ -1,0 +1,223 @@
+\begin{framed} \textbf{测试用例编号:} TC-A001
+
+\textbf{测试模块:} 用户注册
+
+\textbf{测试标题:} 注册新用户
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 无
+
+\textbf{输入数据:} 用户名、密码、电子邮件地址
+
+\textbf{预期输出:} 成功创建新用户并显示成功消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A001测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A002
+
+\textbf{测试模块:} 用户登录
+
+\textbf{测试标题:} 使用正确的用户名和密码登录
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 已注册用户
+
+\textbf{输入数据:} 用户名、密码
+
+\textbf{预期输出:} 成功登录并显示欢迎消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A002测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A003
+
+\textbf{测试模块:} 用户登录
+
+\textbf{测试标题:} 使用错误的用户名和密码登录
+
+\textbf{重要级别:} 中
+
+\textbf{预置条件:} 已注册用户
+
+\textbf{输入数据:} 错误的用户名、密码
+
+\textbf{预期输出:} 登录失败并显示错误消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A003测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A004
+
+\textbf{测试模块:} 用户管理
+
+\textbf{测试标题:} 查看用户列表
+
+\textbf{重要级别:} 中
+
+\textbf{预置条件:} 已登录管理员账户
+
+\textbf{输入数据:} 点击用户管理菜单
+
+\textbf{预期输出:} 显示所有用户的列表
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A004测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A005
+
+\textbf{测试模块:} 用户管理
+
+\textbf{测试标题:} 编辑用户信息
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 已登录管理员账户
+
+\textbf{输入数据:} 选择一个用户并编辑他的信息
+
+\textbf{预期输出:} 成功更新用户信息并显示成功消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A005测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A006
+
+\textbf{测试模块:} 用户管理
+
+\textbf{测试标题:} 删除用户
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 已登录管理员账户
+
+\textbf{输入数据:} 选择一个用户并删除他
+
+\textbf{预期输出:} 成功删除用户并显示成功消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A006测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A007
+
+\textbf{测试模块:} 任务管理
+
+\textbf{测试标题:} 创建任务
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 已登录管理员账户
+
+\textbf{输入数据:} 任务标题、描述、截止日期等信息
+
+\textbf{预期输出:} 成功创建任务并显示成功消息
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A007测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A008
+
+\textbf{测试模块:} 任务管理
+
+\textbf{测试标题:} 查看任务列表
+
+\textbf{重要级别:} 中
+
+\textbf{预置条件:} 已登录用户账户
+
+\textbf{输入数据:} 点击任务列表菜单
+
+\textbf{预期输出:} 显示所有任务的列表
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A008测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A009
+
+\textbf{测试模块:} 活动发布
+
+\textbf{测试标题:} 发布活动
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 用户已登录
+
+\textbf{输入数据:} 活动名称、活动时间、活动地点、活动描述、招募人数
+
+\textbf{预期输出:} 活动发布成功，并显示在活动列表中
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A009测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A010
+
+\textbf{测试模块:} 活动管理
+
+\textbf{测试标题:} 修改活动
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 用户已登录，已发布一项活动
+
+\textbf{输入数据:} 修改后的活动名称、活动时间、活动地点、活动描述、招募人数
+
+\textbf{预期输出:} 活动信息更新成功，并显示在活动列表中
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A010测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A011
+
+\textbf{测试模块:} 活动管理
+
+\textbf{测试标题:} 删除活动
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 用户已登录，已发布一项活动
+
+\textbf{输入数据:} 删除该活动
+
+\textbf{预期输出:} 活动信息删除成功，并不再显示在活动列表中
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A011测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A012
+
+\textbf{测试模块:} 入队管理
+
+\textbf{测试标题:} 申请参加活动
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 用户已登录，已有一项活动发布
+
+\textbf{输入数据:} 申请参加该活动
+
+\textbf{预期输出:} 申请信息提交成功，并等待活动发布者审核
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A012测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A013
+
+\textbf{测试模块:} 活动管理
+
+\textbf{测试标题:} 审核志愿者申请
+
+\textbf{重要级别:} 高
+
+\textbf{预置条件:} 用户已登录，已有一项待审核的志愿者申请
+
+\textbf{输入数据:} 审核该志愿者申请，同意或拒绝
+
+\textbf{预期输出:} 志愿者申请审核结果提交成功，并通知申请者审核结果
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A013测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-A014
+
+\textbf{测试模块:} 活动管理
+
+\textbf{测试标题:} 筛选活动
+
+\textbf{重要级别:} 中
+
+\textbf{预置条件:} 用户已登录，已发布多项活动
+
+\textbf{输入数据:} 活动名称、活动时间、活动地点、招募人数等筛选条件
+
+\textbf{预期输出:} 显示符合筛选条件的活动列表
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-A014测试结果: 通过}} \end{center} \end{framed}

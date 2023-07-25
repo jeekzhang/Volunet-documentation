@@ -1,0 +1,326 @@
+% 用户、系统管理员、志愿者、授课人、反馈、课程、证书、结课证书、授课证书、系统、反馈系统、学习系统、修读系统、授课系统
+\begin{table}[H]  
+\caption{“用户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  用户 \\
+        \hline
+        \quad 编号:  & 4.1 \\
+        \hline
+        \quad 英文:  &  User \\
+        \hline
+        \quad 简述:  & 使用课程管理系统的个人的统称 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 志愿者、授课人、系统管理员 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{“系统管理员”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统管理员 \\
+        \hline
+        \quad 编号:  & 4.2 \\
+        \hline
+        \quad 英文:  &  Administrator \\
+        \hline
+        \quad 简述:  & 管理课程信息审核，进行反馈信息审核的人 \\
+        \hline
+        \quad 属性:  & permissions \\
+        \hline
+        \quad 操作:  & updateUser()、updateLoveFeedback()、reviewQualifications()、reviewDonation()、reviewOrder()、manageCharitableMerchant()、manageBuyer()、manageTeam()、manageDonor()
+\\
+        \hline
+        \quad 相关类:  & 用户、反馈系统、学习系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿者 \\
+        \hline
+        \quad 编号:  & 4.3 \\
+        \hline
+        \quad 英文:  &  Volunteer \\
+        \hline
+        \quad 简述:  & 使用课程管理系统修读课程，进行课程反馈的人 \\
+        \hline
+        \quad 属性:  & gender、course\_name \\
+        \hline 
+        \quad 操作:  & setGender()、getGender()、queryCourse()、queryHomework()、submitHomework()、queryExam()、attendExam()、queryGrade()、applyCourses()、createFeedback()、queryTeacher()\\
+        \hline
+        \quad 相关类:  & 用户、授课人、修读系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“授课人”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  授课人 \\
+        \hline
+        \quad 编号:  & 4.4 \\
+        \hline
+        \quad 英文:  &  Teacher \\
+        \hline
+        \quad 简述:  & 使用课程管理系统对教授课程，回应反馈的人 \\
+        \hline
+        \quad 属性:  & grade、course\_name \\
+        \hline
+        \quad 操作:  & setGrade()、getGender()、queryCourse()、queryStudent()、assignHomework()、gradeHomework()、assignExam()、gradeExam()、applyCourse()、getAnalysis()、modifyCourse()、getFeedback() \\
+        \hline
+        \quad 相关类:  & 用户、志愿者、授课系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“反馈”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  反馈 \\
+        \hline
+        \quad 编号:  & 4.5 \\
+        \hline
+        \quad 英文:  &  Feedback \\
+        \hline
+        \quad 简述:  & 志愿者对课程所提交的课程评价 \\
+        \hline
+        \quad 属性:  & feedback\_id、course\_id、volunteer\_id、feedback\_text、feedback\_date \\
+        \hline
+        \quad 操作:  & addFeedback()、deleteFeedback()、updateFeedback()、getFeedback()\\
+        \hline
+        \quad 相关类:  & 反馈系统、修读系统、授课系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]  
+\caption{“课程”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  课程 \\
+        \hline
+        \quad 编号:  & 4.6 \\
+        \hline
+        \quad 英文:  &  Course \\
+        \hline
+        \quad 简述:  & 授课人发布的提高志愿者相关公益技能的项目 \\
+        \hline
+        \quad 属性:  & course\_id、course\_name、teacher、description、credit、hours、start\_time、location、status \\
+        \hline
+        \quad 操作:  & addCourse()、deleteCourse()、modifyCourse()、getCourse()、openCourse()、closeCourse()、viewEnrolled()、countEnrolled()\\
+        \hline
+        \quad 相关类:  & 修读系统、授课系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“证书”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  证书 \\
+        \hline
+        \quad 编号:  & 4.7 \\
+        \hline
+        \quad 英文:  &  Certificate \\
+        \hline
+        \quad 简述:  & 对个人或组织具有某种能力、资格或成就的认证文件 \\
+        \hline
+        \quad 属性:  & cert\_id、cert\_name、issue、issue\_date\\
+        \hline
+        \quad 操作:  & awardCert()、revokeCert() \\
+        \hline
+        \quad 相关类:  & 授课证书、结课证书 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“爱心证书”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  爱心证书 \\
+        \hline
+        \quad 编号:  & 4.8 \\
+        \hline
+        \quad 英文:  &  CompletionCert \\
+        \hline
+        \quad 简述:  & 对志愿者学习完课程进行认证的文件 \\
+        \hline
+        \quad 属性:  & user\_name、grade\\
+        \hline
+        \quad 操作:  & setCourseName()、setGrade()\\
+        \hline
+        \quad 相关类:  & 修读系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“授课证书”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  授课证书 \\
+        \hline
+        \quad 编号:  & 4.9 \\
+        \hline
+        \quad 英文:  &  TeachingCert \\
+        \hline
+        \quad 简述:  & 对授课人可以教授课程进行认证的文件 \\
+        \hline
+        \quad 属性:  & teacher\_name、teaching\_time、teaching\_loc\\
+        \hline
+        \quad 操作:  & setTeacherName()、setTeachingTime()、setTeachingLoc() \\
+        \hline
+        \quad 相关类:  & 授课系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统 \\
+        \hline
+        \quad 编号:  & 4.10 \\
+        \hline
+        \quad 英文:  &  System \\
+        \hline
+        \quad 简述:  & 课程管理系统的简称 \\
+        \hline
+        \quad 属性:  & id、name、description、version\\
+        \hline
+        \quad 操作:  & start()、stop()、update()\\
+        \hline
+        \quad 相关类:  & 学习系统、反馈系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“反馈系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  反馈系统 \\
+        \hline
+        \quad 编号:  & 4.11 \\
+        \hline
+        \quad 英文:  &  FeedbackSystem \\
+        \hline
+        \quad 简述:  & 负责对课程进行反馈的系统 \\
+        \hline
+        \quad 属性:  & feedbacks\\
+        \hline
+        \quad 操作:  & addFeedback()、removeFeedback()、getFeedbacks()\\
+        \hline
+        \quad 相关类:  & 系统、系统管理员、反馈 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“学习系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  学习系统 \\
+        \hline
+        \quad 编号:  & 4.12 \\
+        \hline
+        \quad 英文:  &  LearningSystem \\
+        \hline
+        \quad 简述:  & 负责教授、学习课程的系统 \\
+        \hline
+        \quad 属性:  & students\\
+        \hline
+        \quad 操作:  & addStudent()、removeStudent()、getStudents()、showProgress()、courseChat()
+\\
+        \hline
+        \quad 相关类:  & 系统、系统管理员、修读系统、授课系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“修读系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  修读系统 \\
+        \hline
+        \quad 编号:  & 4.13 \\
+        \hline
+        \quad 英文:  &  StudySystem \\
+        \hline
+        \quad 简述:  & 负责课程学习、管理学生修读进度的系统 \\
+        \hline
+        \quad 属性:  & courses、enroll\_date\\
+        \hline
+        \quad 操作:  & addCourse()、removeCourse()、getCourses()、studyAnalysis()、getCourseID()、getEnrollDate()、askQuestions()\\
+        \hline
+        \quad 相关类:  & 学习系统、反馈、课程、结课证书、志愿者 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“授课系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  授课系统 \\
+        \hline
+        \quad 编号:  & 4.14 \\
+        \hline
+        \quad 英文:  &  TeachingSystem \\
+        \hline
+        \quad 简述:  & 负责教授的课程的管理的系统 \\
+        \hline
+        \quad 属性:  & teachers、teaching\_date\\
+        \hline
+        \quad 操作:  & addTeacher()、removeTeacher()、getTeachers()、teachingAnalysis()、getTeachingDate()、answerQuestions()\\
+        \hline
+        \quad 相关类:  & 学习系统、反馈、课程、授课证书、授课人 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

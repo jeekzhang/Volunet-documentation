@@ -1,0 +1,140 @@
+% 表单、入队申请、入驻申请表、系统、主页管理、审核系统
+\begin{table}[H]  
+\caption{“表单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  表单 \\
+        \hline
+        \quad 编号:  & 1.1 \\
+        \hline
+        \quad 英文:  &  Form \\
+        \hline
+        \quad 简述:  & 用于收集、记录和处理信息的文档或工具 \\
+        \hline
+        \quad 属性:  & form\_id、form\_name、form\_content、create\_date: date\\
+        \hline
+        \quad 操作:  & addForm()、deleteForm()、updateForm()、getForm()\\
+        \hline
+        \quad 相关类:  & 入队申请、入驻申请表 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“入队申请”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  入队申请 \\
+        \hline
+        \quad 编号:  & 1.2 \\
+        \hline
+        \quad 英文:  & ApplicationForm\\
+        \hline
+        \quad 简述:  & 用于申请加入某个志愿团队的表单 \\
+        \hline
+        \quad 属性:  & # applicantName、applicantEmail、projectDescription、projectName\\
+        \hline
+        \quad 操作:  & setApplicantName()、setApplicantEmail()、setProjectDescription()、 setProjectName()、getProjectName()、getApplicantName()、getApplicantEmail()、getProjectDescription()\\
+        \hline
+        \quad 相关类:  & 表单、志愿者。审核系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“入驻申请表”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  入驻申请表 \\
+        \hline
+        \quad 编号:  & 1.3 \\
+        \hline
+        \quad 英文:  &  AdmissionForm \\
+        \hline
+        \quad 简述:  & 用于志愿团队申请入驻的表单 \\
+        \hline
+        \quad 属性:  & projectName、contactPerson、contactEmail、projectDescription\\
+        \hline
+        \quad 操作:  & + getApplicantName()、setApplicantName()、getApplicantEmail()、setApplicantEmail()、getProjectName()、setProjectName()、getProjectDescription()、setProjectDescription
+\\
+        \hline
+        \quad 相关类:  & 表单、志愿团队、审核系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统 \\
+        \hline
+        \quad 编号:  & 1.4 \\
+        \hline
+        \quad 英文:  &  System \\
+        \hline
+        \quad 简述:  & 信息管理系统的简称 \\
+        \hline
+        \quad 属性:  & id、name、description、version\\
+        \hline
+        \quad 操作:  & start()、stop()、update()\\
+        \hline
+        \quad 相关类:  & 主页管理、审核系统 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“主页管理”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  主页管理 \\
+        \hline
+        \quad 编号:  & 1.5 \\
+        \hline
+        \quad 英文:  &  BasicHomepage \\
+        \hline
+        \quad 简述:  & 负责对志愿者主页进行管理的系统 \\
+        \hline
+        \quad 属性:  & title、description、logo、background\\
+        \hline
+        \quad 操作:  & getTitle()、setTitle()、getDescription()、setDescription()、getLogo()、setLogo()、getBackground()、setBackground()\\
+        \hline
+        \quad 相关类:  & 系统、志愿者 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“审核系统”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  审核系统 \\
+        \hline
+        \quad 编号:  & 1.6 \\
+        \hline
+        \quad 英文:  &  Auditing \\
+        \hline
+        \quad 简述:  & 负责信息审核的系统 \\
+        \hline
+        \quad 属性:  & auditors、status、comments、lastAuditor\\
+        \hline
+        \quad 操作:  & getAuditors()、setAuditors()、getStatus()、setStatus()、getComments()、addComment()、getLastAuditor()、setLastAuditor()
+\\
+        \hline
+        \quad 相关类:  & 系统、系统管理员 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

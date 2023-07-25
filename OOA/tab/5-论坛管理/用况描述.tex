@@ -1,0 +1,433 @@
+\begin{framed}
+\noindent
+用况名称：资讯管理\\
+参与的执行者：用户\\
+前置条件：一个合法的用户已经登录到了这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户通过身份验证进入资讯管理系统，用况开始
+    \item 用户点击“资讯管理”按钮
+    \item 进入资讯管理主界面
+    \item 显示资讯目录
+    \item 当用户点击查看资讯时以任意次数和合理的次序重复如下事件流，直至出现创建资讯事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 系统展示资讯
+          \item 用户评论资讯
+      \end{enumerate}
+    \item 用户选择发布资讯
+    \item 以任意次数和合理的次序重复如下事件流，直至出现发布事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 编辑资讯
+          \item 资讯分类
+          \item 发布审核
+      \end{enumerate}
+    \item 发布资讯或退出
+        \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布资讯
+          \item 退出资讯管理
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在选择发布资讯前的任何时候，用户都可以退出系统，待发布的资讯作为草稿保存 \item 在基本路径的第$5$步，如果有任何不合法的信息，系统提示用户去修改这些信息\item 在基本路径的第$7$步，如果有任何不合法的信息，系统提示用户去修改这些信息  \end{enumerate} 
+后置条件：如果用户提交成功，资讯管理系统会执行相关操作;否则，维持不变
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发布资讯\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+     \item 选择待发布的资讯
+     \item 发布资讯
+\end{enumerate}
+\noindent
+后置条件：资讯
+\end{framed}
+
+
+\begin{framed}
+\noindent
+用况名称：编辑资讯\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击资讯
+    \item 用户点击写资讯
+    \item 转到文章编辑页面，输入标题或正文
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布刚刚编辑的资讯
+          \item 存为草稿或私人文章 
+      \end{enumerate}
+\end{enumerate}
+\noindent
+后置条件：资讯
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：资讯分类\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击资讯
+    \item 用户点击写资讯
+    \item 转到文章编辑页面，输入标题或正文
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布刚刚编辑的资讯
+          \item 存为草稿或私人文章 
+      \end{enumerate}
+\end{enumerate}
+\noindent
+后置条件：资讯
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：查看资讯\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击资讯
+    \item 查看所有资讯
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 按资讯分类查看
+          \item 按资讯归档查看
+      \end{enumerate}
+\end{enumerate}
+\noindent
+后置条件：查看之前发表过的资讯或草稿
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：资讯评论\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击资讯
+    \item 查看所有资讯
+    \item 选择资讯点击评论
+    \item 编辑资讯评论正文
+    \item 选择提交评论
+    \end{enumerate}
+\noindent
+后置条件：资讯评论成功
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：手记管理\\
+参与的执行者：用户\\
+前置条件：一个合法的用户已经登录到了这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户通过身份验证进入手记管理系统，用况开始
+    \item 用户点击“手记管理”按钮
+    \item 进入手记管理主界面
+    \item 显示手记目录
+    \item 当用户点击查看手记时以任意次数和合理的次序重复如下事件流，直至出现创建手记事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 系统展示手记
+          \item 用户评论手记
+      \end{enumerate}
+    \item 用户选择发布手记
+    \item 以任意次数和合理的次序重复如下事件流，直至出现发布事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 编辑手记
+          \item 发布审核
+      \end{enumerate}
+    \item 发布手记或退出
+        \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布手记
+          \item 退出手记管理
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在选择发布手记前的任何时候，用户都可以退出系统，待发布的手记作为草稿保存 \item 在基本路径的第$5$步，如果有任何不合法的信息，系统提示用户去修改这些信息\item 在基本路径的第$7$步，如果有任何不合法的信息，系统提示用户去修改这些信息  \end{enumerate} 
+后置条件：如果用户提交成功，手记管理系统会执行相关操作;否则，维持不变
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发布手记\\
+参与的执行者：用户\\
+前置条件：成功登录到手记管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 选择待发布的手记
+    \item 发布手记
+\end{enumerate}
+\noindent
+后置条件：发表编辑好的手记，或者存问草稿或私人手记
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：编辑手记\\
+参与的执行者：用户\\
+前置条件：成功登录到资讯管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击资讯
+    \item 用户点击写资讯
+    \item 转到文章编辑页面，输入标题或正文
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布刚刚编辑的资讯
+          \item 存为草稿或私人文章 
+      \end{enumerate}
+\end{enumerate}
+\noindent
+后置条件：资讯
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：查看手记\\
+参与的执行者：用户\\
+前置条件：成功登录到手记管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击手记
+    \item 查看所有手记
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 按手记分类查看
+          \item 按手记归档查看
+      \end{enumerate}
+\end{enumerate}
+\noindent
+后置条件：查看之前发表过的手记或草稿
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：手记评论\\
+参与的执行者：用户\\
+前置条件：成功登录到手记管理主页面\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击手记
+    \item 查看所有手记
+    \item 选择手记点击评论
+    \item 编辑手记评论正文
+    \item 选择提交评论
+    \end{enumerate}
+\noindent
+后置条件：手记评论成功
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：论坛管理\\
+参与的执行者：用户\\
+前置条件：一个合法的用户已经登录到了这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户通过身份验证进入论坛管理系统，用况开始
+    \item 用户点击“论坛管理”按钮
+    \item 进入论坛管理主界面
+    \item 显示板块目录
+    \item 点击进入板块
+    \item 当用户点击查看资讯时以任意次数和合理的次序重复如下事件流，直至出现创建资讯事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 系统展示帖子
+          \item 用户回帖
+      \end{enumerate}
+    \item 用户选择发布帖子
+    \item 以任意次数和合理的次序重复如下事件流，直至出现发布事件流
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 编辑帖子 
+          \item 发布审核
+      \end{enumerate}
+    \item 发布资讯或退出
+        \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 发布帖子
+          \item 退出论坛管理
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 在选择发布帖子前的任何时候，用户都可以退出系统，待发布的帖子作为草稿保存 
+       \item 在基本路径的第$5$步，如果有任何不合法的信息，系统提示用户去修改这些信息
+       \item 在基本路径的第$7$步，如果有任何不合法的信息，系统提示用户去修改这些信息  
+   \end{enumerate} 
+后置条件：如果用户提交成功，论坛管理系统会执行相关操作;否则，维持不变
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发布帖子\\
+参与的执行者：用户\\
+前置条件：成功登录到帖子管理主页面且用户有发帖权限\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击创建新帖子按钮
+    \item 用户编辑帖子
+    \item 用户点击发布按钮
+    \item 系统接收到新帖子的请求，并验证帖子的合法性
+    \item 如果帖子符合论坛规则，系统将帖子添加到相应的版块，并向用户显示成功发布的信息
+\end{enumerate}
+\noindent
+后置条件：发布成功的帖子已经在论坛上可见，其他用户可以查看并对其进行回复
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：编辑帖子\\
+参与的执行者：用户\\
+前置条件：成功登录到帖子管理主页面且用户有发帖权限\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户点击创建新帖子按钮
+    \item 系统展示新帖子的编辑界面
+    \item 用户输入帖子的标题和内容
+\end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 用户在编辑帖子时，可以选择添加图片，链接，或其他媒体文件 
+       \item 如果帖子内容不符合论坛规则，系统会拒绝发布，并向用户显示相应的错误信息
+       \item 用户可以选择保存帖子草稿，稍后继续编辑和发布 
+   \end{enumerate} 
+后置条件：帖子进入审查阶段
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：查看帖子\\
+参与的执行者：用户\\
+前置条件：用户已经注册并登录论坛\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户浏览论坛的版块或首页，寻找感兴趣的帖子
+    \item 用户点击帖子标题或预览图片
+    \item 系统显示选定的帖子的全文内容，包括标题，正文，图片，回复等信息
+\end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 用户可以选择将感兴趣的帖子加入收藏，或分享给其他用户或社交平台 
+       \item 用户可以选择对帖子或其作者进行评分或点赞
+   \end{enumerate} 
+后置条件：用户已经查看了帖子的全文内容，并进行了可能的互动
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发送回帖\\
+参与的执行者：用户\\
+前置条件：用户已经选择了一个特定的帖子进行回复且用户有发帖和回帖的权限\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户在选定的帖子下方的回复区域输入回复内容
+    \item 用户点击发布回帖按钮
+    \item 系统接收到回帖请求，并验证回帖内容的合法性
+    \item 如果回帖符合论坛规则，系统将回帖添加到相应的帖子下，并向用户显示成功发布的信息
+    \end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 用户在回帖时，可以选择引用帖子或其他回帖的内容
+       \item 如果回帖内容不符合论坛规则，系统会拒绝发布，并向用户显示相应的错误信息
+       \item 用户可以选择保存回帖草稿，稍后继续编辑和发布
+   \end{enumerate} 
+后置条件：发布成功的回帖已经在帖子下可见，其他用户可以查看并对其进行回复或点赞
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发布审核\\
+参与的执行者：用户，系统管理员\\
+前置条件：用户已经注册并登录系统且已经撰写了待发布信息。\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户在系统中提交一篇信息。
+    \item 系统接收到用户的信息后，将其发送给系统管理员进行审核。
+    \item 系统管理员收到待审核信息的通知。
+    \item 系统管理员开始阅读信息内容，并根据系统的审核规则进行评估。
+    \item 如果信息符合审核规则，系统管理员将文章状态标记为“通过审核”。
+    \item 系统接收到审核通过的消息。
+    \end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 如果系统管理员发现信息不符合审核规则，他/她将文章状态标记为“审核未通过”，并附带理由
+       \item 系统接收到审核未通过的消息，并向用户发送一条通知，说明原因
+       \item 用户可以根据反馈修改信息，并重新提交审核  
+   \end{enumerate} 
+后置条件：审核通过的信息已经在网站上公开发布，用户和其他访客可以查看。
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：发布审核\\
+参与的执行者：用户，系统管理员\\
+前置条件：用户已经注册并登录系统且已经撰写了待发布信息\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 用户在系统中提交一篇信息。
+    \item 系统接收到用户的信息后，将其发送给系统管理员进行审核。
+    \item 系统管理员收到待审核信息的通知。
+    \item 系统管理员开始阅读信息内容，并根据系统的审核规则进行评估。
+    \item 如果信息符合审核规则，系统管理员将文章状态标记为“通过审核”。
+    \item 系统接收到审核通过的消息。
+    \end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 如果系统管理员发现信息不符合审核规则，他/她将文章状态标记为“审核未通过”，并附带理由
+       \item 系统接收到审核未通过的消息，并向用户发送一条通知，说明原因
+       \item 用户可以根据反馈修改信息，并重新提交审核  
+   \end{enumerate} 
+后置条件：审核通过的信息已经在网站上公开发布，用户和其他访客可以查看。
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：生成审计报告\\
+参与的执行者：系统管理员\\
+前置条件：系统管理员已经登录系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 系统管理员在系统中选择需要审计的用户发布的信息。
+    \item 系统管理员按照审计要求和标准，对所选信息进行审计。
+    \item 在审计过程中，系统管理员记录并分类找到的问题。
+    \item 系统管理员完成审计后，输入审计结果和建议。
+    \item 系统管理员点击生成审计报告按钮。
+    \item 系统根据输入的审计结果和建议，自动生成审计报告。
+    \end{enumerate}
+\noindent
+可选路径：\par
+   \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  
+       \item 如果审计过程中没有发现任何问题，系统管理员将在审计报告中特别注明，并给予用户优秀的评级
+       \item 如果系统管理员发现特别严重的问题，他/她将把这些问题标记为高优先级，并在审计报告中特别强调
+   \end{enumerate} 
+后置条件：生成的审计报告已经保存在系统中，系统管理员可以随时查看和下载
+\end{framed}

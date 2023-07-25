@@ -1,0 +1,90 @@
+
+\begin{framed}
+\noindent
+用况名称：授课管理\\
+参与的执行者：授课人、系统管理员\\
+前置条件：用户身份为状态无异常账号，且通过资质审核可以提交课程项目发布申请；用户身份为系统管理员，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当用户新创建授课申请单时，用况开始
+    \item 用户填写授课申请单信息
+    \item 用户提交授课申请单
+    \item 系统管理员对提交的信息进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：资质核验通过发布，用户获得授课资格，成为授课人
+          \item 审核失败：将核验信息反馈给授课人，转到2继续
+      \end{enumerate}
+    \item 当授课人选择创建课程时，用况开始
+    \item 授课人为创建的课程输入必要的信息
+    \item 授课人选择为创建的课程导入必要的课程资料
+    \item 授课进行发布课程，在课程首页可以获得展示
+\end{enumerate}
+\noindent
+可选路径：\par
+     \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 系统管理员将授课人分配到不同的课程中，进行管理和监督教学工作。 \item 授课人创建考试和评估任务，对学生进行考核和评估。  \end{enumerate} 
+后置条件：授课人完成课程的上课记录，系统需要自动计算学生的考勤情况并更新到学生的考勤记录中
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：修读管理\\
+参与的执行者：授课人、志愿者、系统管理员\\
+前置条件：用户身份为授课人，且资质状态正常；用户身份为志愿者，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿者选择查看课程时，用况开始
+    \item 志愿者选择查看具体课程信息
+    \item 志愿者提交选课申请
+    \item 系统管理员对提交的选课申请信息进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：课程选择成功，志愿者成为此课程学生
+          \item 审核失败：将失败信息反馈给志愿者，转到2继续
+      \end{enumerate}
+    \item 当志愿者购买课程时，用况开始
+    \item 志愿者将选择的课程加入购物车并提交订单
+    \item 志愿者选择支付方式并进行支付
+    \item 系统检验支付是否成功，如果志愿者账户的余额不足以支付，系统将提示志愿者支付失败并重新尝试
+    \item 当支付成功后，订单就被标记上已经支付
+    \item 当前订单的课程向此志愿者进行解锁
+    \item 志愿者可以对课程进行学习、并与授课人交流提问
+    \item 课程完结，同时记录志愿者信息用于课程反馈，志愿者相关用况结束
+\end{enumerate}
+\noindent
+可选路径：\par
+         \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在选择提交课程之前的任何时间，志愿者可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复 
+         \item 在用况开始到支付开始之前以及支付完成之后的任何时间，志愿者可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复  \end{enumerate} 
+后置条件：完成一定的课程和通过相关考试后，提供相关结课证书
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：反馈管理\\
+参与的执行者：志愿者、系统管理员、授课人\\
+前置条件：用户身份为志愿者、系统管理员或授课人，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿者选择课程反馈界面时，用况开始
+    \item 志愿者选择撰写课程反馈界面
+    \item 志愿者提交课程反馈
+    \item 系统管理员对提交的反馈信息进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：课程反馈发布成功，志愿者用况结束
+          \item 审核失败：将审核失败信息反馈给志愿者，转到2继续
+      \end{enumerate}
+    \item 当授课人查看课程反馈页面时，用况开始
+    \item 授课人选择查看内容：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 查看学生修读情况：显示其对应的修读情况，用况结束
+          \item 查看课程反馈：显示提交的课程反馈，用况结束
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+         \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在任何时间，用户可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复 
+         \item 如果系统管理员无法判断反馈信息是否符合审核标准，可以将信息标记为“待定”，并将信息转交给其他审核人员审核  \end{enumerate}
+后置条件：反馈结果被记录在系统中，反馈完成
+
+\end{framed}

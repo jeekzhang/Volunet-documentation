@@ -1,0 +1,237 @@
+% 用户、志愿者、志愿团队、系统管理员、名单、参与人员名单、表单、
+\begin{table}[H]  
+\caption{“用户”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  用户 \\
+        \hline
+        \quad 编号:  & 2.1 \\
+        \hline
+        \quad 英文:  &  User \\
+        \hline
+        \quad 简述:  & 使用志愿服务系统的个人或组织的统称 \\
+        \hline
+        \quad 属性:  & id、username、password、name、age、contact \\
+        \hline
+        \quad 操作:  & setPassword()、getId()、getName()、getAge() 、login()、logout() \\
+        \hline
+        \quad 相关类:  & 志愿者、志愿团队、系统管理员 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿团队”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿团队 \\
+        \hline
+        \quad 编号:  & 2.2 \\
+        \hline
+        \quad 英文:  &  Team \\
+        \hline
+        \quad 简述:  & 使用志愿服务系统发布志愿项目的组织 \\
+        \hline
+        \quad 属性:  & category、team\_name \\
+        \hline 
+        \quad 操作:  & getName()、getDescription()、getLeader()、getMembers()、addMember()、removeMember()、getProjects()、addProject()、removeProject()、getMission()、setMission()
+\\
+        \hline
+        \quad 相关类:  & 用户、项目申请单、志愿者 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“志愿者”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  志愿者 \\
+        \hline
+        \quad 编号:  & 2.3 \\
+        \hline
+        \quad 英文:  &  Volunteer \\
+        \hline
+        \quad 简述:  & 使用志愿服务系统对参与志愿项目的人 \\
+        \hline
+        \quad 属性:  & gender、volunteer\_name
+ \\
+        \hline
+        \quad 操作:  & setGender()、getGender()、queryVolunteer()、queryTeam()、createForm()
+ \\
+        \hline
+        \quad 相关类:  & 用户、志愿团队、项目报名单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“系统管理员”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  系统管理员 \\
+        \hline
+        \quad 编号:  & 2.4 \\
+        \hline
+        \quad 英文:  &  Administrator \\
+        \hline
+        \quad 简述:  & 管理志愿服务系统，进行信息审核的人 \\
+        \hline
+        \quad 属性:  & permissions \\
+        \hline
+        \quad 操作:  & updateUser()、manageVolunteer()、manageTeam()、manageForm()\\
+        \hline
+        \quad 相关类:  & 用户、审核系统\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“名单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  名单 \\
+        \hline
+        \quad 编号:  & 2.5 \\
+        \hline
+        \quad 英文:  &  List \\
+        \hline
+        \quad 简述:  & 按照一定标准或规则列出的人员或事物清单 \\
+        \hline
+        \quad 属性:  &list\_id、list\_name、list\_content、create\_date\\
+        \hline
+        \quad 操作:  & addList()、deleteList()、updateList()、getList() \\
+        \hline
+        \quad 相关类:  & 参与人员名单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“参与人员名单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  参与人员名单 \\
+        \hline
+        \quad 编号:  & 2.6 \\
+        \hline
+        \quad 英文:  &  ParticipantList \\
+        \hline
+        \quad 简述:  & 参与志愿项目的公示名单 \\
+        \hline
+        \quad 属性:  & user\_name、project\_id
+\\
+        \hline
+        \quad 操作:  & setUserName()、updateProject()
+
+\\
+        \hline
+        \quad 相关类:  & 名单、志愿团队 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“表单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  表单 \\
+        \hline
+        \quad 编号:  & 2.7 \\
+        \hline
+        \quad 英文:  &  Form \\
+        \hline
+        \quad 简述:  & 用于收集、记录和处理信息的文档或工具 \\
+        \hline
+        \quad 属性:  & form\_id、form\_name、form\_content、create\_date: date\\
+        \hline
+        \quad 操作:  & addForm()、deleteForm()、updateForm()、getForm()\\
+        \hline
+        \quad 相关类:  & 项目申请单、项目报名单、项目管理名单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“项目申请单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  项目申请单 \\
+        \hline
+        \quad 编号:  & 2.8 \\
+        \hline
+        \quad 英文:  & EntryForm\\
+        \hline
+        \quad 简述:  & 用于提交和审批志愿项目计划的表单 \\
+        \hline
+        \quad 属性:  & projectTitle、projectDescription、projectManager、projectBudget\\
+        \hline
+        \quad 操作:  & setProjectTitle()、getProjectTitle()、setProjectManager()、getProjectManager()、getProjectBudget()\\
+        \hline
+        \quad 相关类:  & 表单、系统管理员、志愿团队 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“项目报名单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  项目报名单 \\
+        \hline
+        \quad 编号:  & 2.9 \\
+        \hline
+        \quad 英文:  &  EntryForm \\
+        \hline
+        \quad 简述:  & 收集志愿项目参与者信息的表单 \\
+        \hline
+        \quad 属性:  & fullName、email、phone、projectTitle\\
+        \hline
+        \quad 操作:  & setFullName()、getFullName()、setEmail()、getEmail()、setPhone()、getPhone()、setProjectTitle(title: str)、getProjectTitle()、submitEntryForm()、saveEntryForm()、resetEntryForm()、printEntryForm()、sendConfirmationEmail()
+\\
+        \hline
+        \quad 相关类:  & 表单、志愿者、系统管理员 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]  
+\caption{“项目管理表单”类词条描述}  
+\begin{center}  
+    \begin{tabular}{l p{11cm}} 
+        \hline
+        \quad 名称:  &  项目管理表单 \\
+        \hline
+        \quad 编号:  & 2.10 \\
+        \hline
+        \quad 英文:  &  BasicForm \\
+        \hline
+        \quad 简述:  & 用于记录和跟踪志愿项目管理信息的表单 \\
+        \hline
+        \quad 属性:  & projectName、projectManager、projectStartDate、projectEndDate\\
+        \hline
+        \quad 操作:  & setProjectName()、getProjectName()、setProjectManager()、getProjectManager()、setProjectStartDate()、getProjectStartDate()、setProjectEndDate()、getProjectEndDate()、getProjectDuration()\\
+        \hline
+        \quad 相关类:  & 志愿者、志愿团队、表单 \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}

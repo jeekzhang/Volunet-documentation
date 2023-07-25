@@ -1,0 +1,293 @@
+\fancyhead[LH]{复旦大学软件工程}
+\fancyhead[RH]{第四章\quad 用况建模}
+\section{用况建模}
+
+% \subsection{领域概念模型}
+
+
+\subsection{确定执行者}
+由于Volunet志愿服务系统过于庞大，在整个系统上去确定执行者将变得较为困难。故我们沿用需求分析中对其的系统拆解，分为信息管理系统、志愿服务系统、爱心捐助系统、公益课程系统、交流论坛系统、志愿交友系统六个部分，再在这六个子系统下确定各自相关的执行者。
+
+\subsubsection{信息管理系统执行者}
+信息管理系统的执行者包括：志愿团队、志愿者、系统管理员。其中，使用信息管理系统的人或组织有志愿团队、志愿者、系统管理员，这些人、组织都是信息管理系统的执行者。
+
+信息管理系统的执行者及其词条描述如下：
+\input{OOA/tab/1-信息管理/执行者描述}
+
+\subsubsection{志愿服务系统执行者}
+志愿服务系统的执行者包括：志愿团队、志愿者、审核员。
+定位打卡系统 交流论坛系统。其中，使用志愿服务系统的人或组织有志愿团队、志愿者、审核员，与爱心捐助交互的其他外部系统有获取当前定位信息的定位打卡系统，这些人、组织和外部系统都是志愿服务系统的执行者。
+
+志愿服务为系统的执行者及其词条描述如下：
+\input{OOA/tab/2-志愿服务/执行者描述}
+
+\subsubsection{爱心捐助系统执行者}
+
+
+爱心捐助系统的执行者包括：志愿团队、捐款者、购买者、公益商户、系统管理员、快递配送系统、收费管理系统。其中，使用爱心捐助系统的人或组织有捐款者、购买者、志愿团队、公益商户、系统管理员，与爱心捐助交互的其他外部系统有负责订单快递配送的快递配送系统、对捐款和货款进行管理的收费管理系统，这些人、组织和外部系统都是爱心捐助系统的执行者。
+
+爱心捐助系统的执行者及其词条描述如下：
+\input{OOA/tab/3-爱心管理/执行者描述}
+
+\subsubsection{公益课程系统执行者}
+
+公益课程系统的执行者包括：志愿者、授课人、系统管理员、反馈管理系统、修读管理系统、授课管理系统。
+
+公益课程系统的执行者及其词条描述如下：
+
+\input{OOA/tab/4-课程管理/执行者描述}
+
+\subsubsection{交流论坛系统执行者}
+
+交流论坛系统的执行者包括：用户、系统管理员。
+
+交流论坛系统的执行者及其词条描述如下：
+
+\input{OOA/tab/5-论坛管理/执行者描述}
+
+\subsubsection{志愿交友系统执行者}
+
+志愿交友系统的执行者包括：志愿者、交友申请、消息发送、消息接收、交友管理系统、消息管理系统。
+
+志愿交友系统的执行者及其词条描述如下：
+
+\input{OOA/tab/6-交友管理/执行者描述}
+
+\subsection{确定用况}
+
+\subsubsection{信息管理系统用况}
+
+信息管理系统针对志愿服务主体（志愿者和志愿团队）的账号和操作进行全流程的管理，包括用户管理、注册管理、组队管理、团队管理和信息审核。
+
+信息管理系统的用况及其词条简述如下：
+\input{OOA/tab/1-信息管理/识别用况}
+
+\subsubsection{志愿服务系统用况}
+
+志愿服务系统针对志愿服务内容进行全流程的管理，包括志愿项目的发布，志愿者申请参与志愿项目，志愿团队管理活动过程并获得活动情况报告。
+
+信息管理系统的用况及其词条简述如下：
+\input{OOA/tab/2-志愿服务/识别用况}
+
+
+\subsubsection{爱心捐助系统用况}
+
+爱心捐助系统针对爱心捐助接收的款项进行全流程的管理，包括捐款管理、订单管理、爱心反馈管理和信息审核。
+
+爱心捐助系统的用况及其词条简述如下：
+\input{OOA/tab/3-爱心管理/识别用况}
+
+\subsubsection{公益课程系统用况}
+
+公益课程系统针对授课人的课程发布，志愿者的课程学习和课程反馈交流进行管理。
+
+公益课程系统的用况及其词条简述如下：
+\input{OOA/tab/4-课程管理/识别用况}
+
+\subsubsection{交流论坛系统用况}
+
+交流论坛系统针对政府机构、志愿团队、志愿者的资讯发布，志愿者的手记发布和论坛交流进行管理。
+
+交流论坛系统的用况及其词条简述如下：
+\input{OOA/tab/5-论坛管理/识别用况}
+
+\subsubsection{志愿交友系统用况}
+
+志愿交友系统针对志愿者的交友申请，好友之间的聊天进行管理。
+
+志愿交友系统的用况及其词条简述如下：
+\input{OOA/tab/6-交友管理/识别用况}
+
+
+
+\subsection{用况图}
+\subsubsection{信息管理系统}
+\begin{figure}[H] 
+
+    \center{\includegraphics[scale=0.5]{OOA/fig/1-信息管理/信息管理用况图.pdf}} 
+    \bicaption{Volunet信息管理系统用况图}{Information Management System Usage Chart of Volunet} 
+\end{figure}
+
+
+\subsubsection{志愿服务系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.5]{OOA/fig/2-志愿服务/VS-用况图.pdf}} 
+    \bicaption{Volunet志愿服务系统用况图}{Voluntary Service System Usage Chart of Volunet} 
+\end{figure}
+
+
+\subsubsection{爱心捐助系统}
+\begin{figure}[H] 
+
+    \center{\includegraphics[scale=0.5]{OOA/fig/3-爱心管理/爱心管理用况图.pdf}} 
+    \bicaption{Volunet爱心捐助系统用况图}{Love Donation System Usage Chart of Volunet} 
+\end{figure}
+
+\subsubsection{公益课程系统}
+\begin{figure}[H] 
+
+    \center{\includegraphics[scale=0.42]{OOA/fig/4-课程管理/课程管理用况图.png}} 
+    \bicaption{Volunet公益课程系统用况图}{Course System Usage Chart of Volunet} 
+\end{figure}
+
+\subsubsection{交流论坛系统}
+\begin{figure}[H] 
+
+    \center{\includegraphics[scale=0.35]{OOA/fig/5-论坛管理/论坛管理用况图.png}} 
+    \bicaption{Volunet交流论坛系统用况图}{Communication System Use Case Chart of Volunet} 
+\end{figure}
+
+\subsubsection{志愿交友系统}
+\begin{figure}[H] 
+
+    \center{\includegraphics[scale=0.5]{OOA/fig/6-交友管理/志愿交友管理用况图.png}} 
+    \bicaption{Volunet志愿交友用况图}{Volunteer Friends System Usage Chart of Volunet} 
+\end{figure}
+
+\subsection{用况描述}
+
+\subsubsection{信息管理系统}
+
+信息管理系统的用况描述如下：
+\input{OOA/tab/1-信息管理/用况描述}
+
+\subsubsection{志愿服务系统}
+志愿服务系统的用况描述如下：
+\input{OOA/tab/2-志愿服务/用况描述}
+
+\subsubsection{爱心捐助系统}
+
+爱心捐助系统的用况描述如下：
+\input{OOA/tab/3-爱心管理/用况描述}
+
+\subsubsection{公益课程系统}
+
+公益课程系统的用况描述如下：
+\input{OOA/tab/4-课程管理/用况描述}
+
+\subsubsection{交流论坛系统}
+
+交流论坛系统的用况描述如下：
+\input{OOA/tab/5-论坛管理/用况描述}
+
+\subsubsection{志愿交友系统}
+
+% \subsubsection{志愿交友系统}
+
+志愿交友系统的用况描述如下：
+\input{OOA/tab/6-交友管理/用况描述}
+
+\subsection{用况活动图}
+\subsubsection{信息管理系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/1-信息管理/信息管理用况活动图-1.pdf}} 
+    \bicaption{Volunet信息管理系统用况活动1子图}{Activity 1 Subgraph for Information Management System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/1-信息管理/信息管理用况活动图-2.pdf}} 
+    \bicaption{Volunet信息管理系统用况活动2子图}{Activity 2 Subgraph for Information Management System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/1-信息管理/信息管理用况活动图-3.pdf}} 
+    \bicaption{Volunet信息管理系统用况活动3子图}{Activity 3 Subgraph for Information Management System Usage of Volunet} 
+\end{figure}
+
+\quad
+\subsubsection{志愿服务系统}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/2-志愿服务/VS-用况活动图1.pdf}} 
+    \bicaption{Volunet志愿服务系统用况活动1子图}{Activity 1 Subgraph for Voluntary Service System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/2-志愿服务/VS-用况活动图2.pdf}} 
+    \bicaption{Volunet志愿服务系统用况活动2子图}{Activity 2 Subgraph for Voluntary Service System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/2-志愿服务/VS-用况活动图3.pdf}} 
+    \bicaption{Volunet志愿服务系统用况活动3子图}{Activity 3 Subgraph for Voluntary Service System Usage of Volunet} 
+\end{figure}
+
+
+\subsubsection{爱心捐助系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/3-爱心管理/爱心管理用况活动图-1.pdf}} 
+    \bicaption{Volunet爱心捐助系统用况活动1子图}{Activity 1 Subgraph for Love Donation System Usage of Volunet} 
+\end{figure}
+\quad
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/3-爱心管理/爱心管理用况活动图-2.pdf}} 
+    \bicaption{Volunet爱心捐助系统用况活动2子图}{Activity 2 Subgraph for Love Donation System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.5]{OOA/fig/3-爱心管理/爱心管理用况活动图-3.pdf}} 
+    \bicaption{Volunet爱心捐助系统用况活动3子图}{Activity 3 Subgraph for Love Donation System Usage of Volunet} 
+\end{figure}
+
+\subsubsection{公益课程系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.25]{OOA/fig/4-课程管理/课程管理用况活动图.png}} 
+    \bicaption{Volunet公益课程系统用况活动1子图}{Activity 1 Subgraph for Course System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.35]{OOA/fig/4-课程管理/课程管理用况活动图 (1).png}} 
+    \bicaption{Volunet公益课程系统用况活动2子图}{Activity 2 Subgraph for Course System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.35]{OOA/fig/4-课程管理/课程管理用况活动图 (2).png}} 
+    \bicaption{Volunet公益课程系统用况活动3子图}{Activity 3 Subgraph for Course System Usage of Volunet} 
+\end{figure}
+
+\subsubsection{交流论坛系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.25]{OOA/fig/5-论坛管理/论坛管理用况活动图-1.png}} 
+    \bicaption{Volunet交流论坛系统用况活动1子图}{Activity 1 Subgraph for Communication System Use Case of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.25]{OOA/fig/5-论坛管理/论坛管理用况活动图-2.png}} 
+    \bicaption{Volunet交流论坛系统用况活动2子图}{Activity 2 Subgraph for Communication System Use Case of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.25]{OOA/fig/5-论坛管理/论坛管理用况活动图-3.png}} 
+    \bicaption{Volunet交流论坛系统用况活动3子图}{Activity 3 Subgraph for Communication System Use Case of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.25]{OOA/fig/5-论坛管理/论坛管理用况活动图-4.png}} 
+    \bicaption{Volunet交流论坛系统用况活动4子图}{Activity 4 Subgraph for Communication System Use Case of Volunet} 
+\end{figure}
+
+\subsubsection{志愿交友系统}
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/6-交友管理/志愿交友管理用况活动图.png}} 
+    \bicaption{Volunet志愿交友系统用况活动1子图}{Activity 1 Subgraph for Volunteer Friends System Usage of Volunet} 
+\end{figure}
+
+\begin{figure}[H] 
+    \center{\includegraphics[scale=0.4]{OOA/fig/6-交友管理/志愿交友管理用况活动图 (1).png}} 
+    \bicaption{Volunet志愿交友系统用况活动1子图}{Activity 1 Subgraph for Volunteer Friends System Usage of Volunet} 
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage

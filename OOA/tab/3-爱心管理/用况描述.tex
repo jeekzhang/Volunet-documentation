@@ -1,0 +1,94 @@
+
+\begin{framed}
+\noindent
+用况名称：捐款管理\\
+参与的执行者：捐款者、志愿团队、系统管理员\\
+前置条件：用户身份为志愿团队，且通过资质审核可以提交志愿项目发布申请；用户身份为捐款者，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿团队新建资助项目单时，用况开始
+    \item 志愿团队填写资助项目信息
+    \item 志愿团队提交资助项目申请单
+    \item 系统管理员对提交的信息进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：项目发布，志愿团队相关用况结束
+          \item 审核失败：将错误信息反馈给志愿团队，转到2继续
+      \end{enumerate}
+    \item 当捐款者选择募捐项目时，用况开始
+    \item 捐款者为选择的项目输入捐款的数额
+    \item 捐款者选择支付方式并进行支付
+    \item 系统检验支付是否成功，如果捐款者账户的余额不足以支付，系统将提示用户支付失败并重新尝试
+    \item 当支付成功后，捐款就被标记上已经支付，同时记录捐款者信息用于爱心反馈，捐款者相关用况结束
+\end{enumerate}
+\noindent
+可选路径：\par
+     \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在选择提交资助项目申请单之前的任何时间，志愿团队可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复 \item 在支付开始之前的任何时间，捐款者可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复  \end{enumerate} 
+后置条件：资助项目通过审核并添加进募捐项目列表，捐款者支付成功后的信息会保存在系统中并做标记
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：订单管理\\
+参与的执行者：购买者、爱心商户、系统管理员\\
+前置条件：用户身份为爱心商户，且营业状态正常；用户身份为购买者，且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当公益商户添加公益商品时，用况开始
+    \item 公益商户填写公益商品信息
+    \item 公益商户提交公益商品上架单
+    \item 系统管理员对提交的商品信息进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：商品发布，公益商户相关用况结束
+          \item 审核失败：将失败信息反馈给公益商户，转到2继续
+      \end{enumerate}
+    \item 当购买者选择公益商品时，用况开始
+    \item 购买者将选择的公益商品加入购物车并提交订单
+    \item 购买者选择支付方式并进行支付
+    \item 系统检验支付是否成功，如果捐款者账户的余额不足以支付，系统将提示用户支付失败并重新尝试
+    \item 当支付成功后，订单就被标记上已经支付
+    \item 支付完成的订单将接入快递配送平台进行配送
+    \item 购买者收到货物后对订单进行签收
+    \item 订单完结，同时记录购买者信息用于爱心反馈，购买者相关用况结束
+\end{enumerate}
+\noindent
+可选路径：\par
+         \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]  \item 在选择提交公益商品信息之前的任何时间，公益商户可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复 \item 在用况开始到支付开始之前以及支付完成之后的任何时间，购买者可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复  \end{enumerate} 
+后置条件：公益商品通过审核并添加进商品页面，购买者订单完成后的信息会保存在系统中并做标记
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：爱心反馈管理\\
+参与的执行者：捐款者、购买者\\
+前置条件：用户身份为爱心人士（即捐款者和购买者），且已经合法登陆到这个系统\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当爱心人士查看爱心反馈页面时，用况开始
+    \item 爱心人士选择查看内容：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 查看爱心证书：显示其对应的爱心证书，用况结束
+          \item 查看鸣谢名单：显示公示的鸣谢爱心人士名单，用况结束
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+    在任何时间，爱心人士可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复\\
+后置条件：无
+
+\end{framed}
+
+\begin{framed}
+\noindent
+用况名称：信息审核\\
+参与的执行者：系统管理员\\
+前置条件：系统中存在需要审核的信息，且系统管理员已经合法登陆到这个系统
+事件流： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 系统管理员登录审核系统 \item 系统管理员选择需要审核的信息 \item 系统管理员查看信息内容，判断是否符合审核标准 \item 如果信息符合审核标准，系统管理员将信息标记为“审核通过”，并记录审核结果 \item 如果信息不符合审核标准，系统管理员将信息标记为“审核不通过”，并记录审核结果 \end{enumerate}
+\noindent
+可选路径： \par
+在步骤3中，如果系统管理员无法判断信息是否符合审核标准，可以将信息标记为“待定”，并将信息转交给其他审核人员审核\\
+后置条件：审核结果被记录在系统中，审核完成
+
+\end{framed}

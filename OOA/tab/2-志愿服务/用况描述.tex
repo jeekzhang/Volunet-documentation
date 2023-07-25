@@ -1,0 +1,44 @@
+\begin{framed}
+\noindent
+用况名称：项目发布\\
+参与的执行者：志愿团队、系统管理员\\
+前置条件：用户身份为志愿团队，且通过资质审核可以提交志愿项目发布申请\\
+事件流：\\
+基本路径：
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+    \item 当志愿团队新建志愿项目单时，用况开始
+    \item 志愿团队填写志愿项目信息
+    \item 志愿团队提交志愿项目申请单
+    \item 系统管理员对提交的志愿项目进行审核：
+    \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em]
+          \item 审核通过：项目发布，用况结束
+          \item 审核失败：将错误信息反馈给志愿团队，转到2继续
+      \end{enumerate}
+\end{enumerate}
+\noindent
+可选路径：\par
+    在选择提交志愿项目申请单之前的任何时间，志愿团队可以退出该系统，系统会自动保存当前历史记录，并在下一次进入系统时询问是否恢复\\
+后置条件：项目通过审核并发布在Volunet，该项目会被编号进入志愿项目库
+
+\end{framed}
+
+\begin{framed} \noindent 用况名称：项目报名\\ 
+参与的执行者：志愿者、志愿团队、系统管理员\\
+前置条件：志愿者已经注册并登录系统\\ 
+事件流：\\
+基本路径： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 志愿者进入项目报名页面。 \item 系统显示可报名的项目列表。 \item 志愿者选择感兴趣的项目。 \item 系统显示该项目的详细信息和报名表格。 \item 志愿者填写报名表格并提交。 \item 系统保存志愿者的报名信息，并将其加入该项目的报名名单中。 \item 系统向志愿者发送报名成功的通知。 \end{enumerate} \noindent 
+可选路径： \par
+如果该项目已经满员，系统提示志愿者该项目已经无法报名，返回步骤2。如果志愿者填写的报名表格信息不完整或不符合要求，系统提示志愿者修改并重新提交，返回步骤4。 \\
+ \end{framed}
+
+ \begin{framed} \noindent 
+用况名称：项目管理\\ 
+参与的执行者：志愿者、志愿团队、系统管理员\\
+ 前置条件：项目需求已经明确并且项目计划已经制定\\
+ 事件流： \\
+基本路径： \begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt,itemindent=1em] \item 系统管理员创建项目。 \item 系统管理员指派志愿者和志愿团队成员。 \item 志愿者和志愿团队成员接受任务并开始执行。 \item 志愿者和志愿团队成员定期向系统管理员报告项目进展情况。 \item 系统管理员根据报告情况对项目进度进行监控和管理。 \item 当项目完成时，系统管理员关闭项目并将成果提交给相关方。 \end{enumerate} 
+可选路径： \par 
+如果项目进展不如预期，系统管理员可以采取措施来加速项目进度。如果项目需求发生变化，系统管理员可以更新项目计划并通知相关人员\\
+\end{framed}
+
+

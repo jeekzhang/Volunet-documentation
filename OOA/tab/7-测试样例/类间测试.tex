@@ -1,0 +1,183 @@
+\begin{framed} \textbf{测试用例编号:} TC-F001
+
+\textbf{测试系统:} 信息管理系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、系统管理员
+
+\textbf{测试内容：} 测试当系统管理员添加志愿者时，志愿者类是否能够正确处理该消息并将志愿者添加到系统中。
+
+\textbf{消息序列:} 系统管理员 -> 控制器 -> 志愿者
+
+\textbf{测试标准:} 测试结果应该是志愿者类能够正确处理系统管理员添加志愿者的消息，并将志愿者添加到系统中。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F001测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F002
+
+\textbf{测试系统:} 信息管理系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、系统管理员
+
+\textbf{测试内容：} 测试当系统管理员删除志愿者时，志愿者类是否能够正确处理该消息并将志愿者从系统中移除。
+
+\textbf{消息序列:} 系统管理员 -> 控制器 -> 志愿者
+
+\textbf{测试标准:} 测试结果应该是志愿者类能够正确处理系统管理员删除志愿者的消息，并将志愿者从系统中移除。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F002测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F003
+
+\textbf{测试系统:} 信息管理系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、系统管理员
+
+\textbf{测试内容：} 测试当志愿者修改个人信息时，系统管理员是否能够正确处理该消息并更新志愿者的信息。
+
+\textbf{消息序列:} 志愿者 -> 控制器 -> 系统管理员
+
+\textbf{测试标准:} 测试结果应该是系统管理员能够正确处理志愿者修改个人信息的消息，并更新志愿者的信息。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F003测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed}
+\textbf{测试用例编号:} TC-F004
+
+\textbf{测试系统:} 志愿服务系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、志愿团队
+
+\textbf{测试内容：} 测试当志愿者申请加入志愿团队时，志愿团队是否会收到加入请求
+
+\textbf{消息序列:} 志愿者 -> 志愿团队
+
+\textbf{测试标准:} 志愿团队收到志愿者的加入请求，并能够进行审核和处理
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{TC-F004测试结果: 通过}}
+\end{center}
+\end{framed}
+
+\begin{framed}
+\textbf{测试用例编号:} TC-F005
+
+\textbf{测试系统:} 志愿服务系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、志愿团队
+
+\textbf{测试内容：} 测试志愿者退出志愿团队时，志愿团队是否能够正常处理
+
+\textbf{消息序列:} 志愿者 -> 志愿团队
+
+\textbf{测试标准:} 志愿团队能够从志愿团队成员名单中移除该志愿者，并将该志愿者的状态更新为“已退出”
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{TC-F005测试结果: 通过}}
+\end{center}
+\end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F006
+
+\textbf{测试系统:} 爱心捐助系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 捐款者、志愿团队
+
+\textbf{测试内容：} 测试当捐款者捐款时，志愿团队是否能够收到捐款通知
+
+\textbf{消息序列:} 捐款者 -> 爱心捐助系统 -> 爱心捐助系统 -> 志愿团队
+
+\textbf{测试标准:} 志愿团队能够在收到捐款通知后及时处理并向捐款者发送感谢信
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F006测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F007
+
+\textbf{测试系统:} 爱心捐助系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 捐款者、志愿团队
+
+\textbf{测试内容：} 测试当捐款者取消捐款时，志愿团队是否能够正常处理
+
+\textbf{消息序列:} 捐款者 -> 爱心捐助系统 -> 爱心捐助系统 -> 志愿团队
+
+\textbf{测试标准:} 志愿团队能够从捐款者名单中移除该捐款者，并将该捐款者的状态更新为“已取消”
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F007测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F008
+
+\textbf{测试系统:} 公益课程系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、授课人
+
+\textbf{测试内容：} 测试当志愿者申请成为授课人时，授课人类是否能够正确处理该请求。
+
+\textbf{消息序列:} 志愿者 -> 控制器 -> 授课人
+
+\textbf{测试标准:} 测试结果应该是授课人类能够正确处理志愿者申请成为授课人的请求，并将志愿者添加到授课人列表中。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F008测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F009
+
+\textbf{测试系统:} 公益课程系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、授课人
+
+\textbf{测试内容：} 测试当授课人发布课程时，志愿者类是否能够正确处理该消息并接收课程信息。
+
+\textbf{消息序列:} 授课人 -> 控制器 -> 志愿者
+
+\textbf{测试标准:} 测试结果应该是志愿者类能够正确处理授课人发布课程的消息，并将课程信息添加到志愿者的课程列表中。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F009测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F010
+
+\textbf{测试系统:} 交流论坛系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、系统管理员
+
+\textbf{测试内容：} 测试当志愿者发表帖子时，系统管理员是否能够正确处理该消息并审核帖子。
+
+\textbf{消息序列:} 志愿者 -> 控制器 -> 系统管理员
+
+\textbf{测试标准:} 测试结果应该是系统管理员能够正确处理志愿者发表帖子的消息，并审核帖子内容是否符合规范。审核通过后，帖子应该被发布到论坛上。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F010测试结果: 通过}} \end{center} \end{framed}
+
+\begin{framed} \textbf{测试用例编号:} TC-F011
+
+\textbf{测试系统:} 交流论坛系统
+
+\textbf{重要级别:} 高
+
+\textbf{相关类：} 志愿者、系统管理员
+
+\textbf{测试内容：} 测试当系统管理员删除帖子时，志愿者是否能够正确处理该消息并删除相应的帖子。
+
+\textbf{消息序列:} 系统管理员 -> 控制器 -> 志愿者
+
+\textbf{测试标准:} 测试结果应该是志愿者能够正确处理系统管理员删除帖子的消息，并删除相应的帖子。帖子应该从论坛中移除，不再显示给其他用户。
+
+\begin{center} \fbox{\parbox{0.8\textwidth}{TC-F011测试结果: 通过}} \end{center} \end{framed}
