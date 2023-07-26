@@ -1,5 +1,5 @@
 # OOA Project
-——Soft Software Engineering COMP130015
+——Software Engineering COMP130015
 > 复旦大学2023年春大三下《软件工程》面向对象分析和设计课程项目文档
 
 
